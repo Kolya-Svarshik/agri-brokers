@@ -1,0 +1,40 @@
+@import '../../style/variables.scss';
+
+.header {
+  width: 100%;
+
+  background-color: $headerColor;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: $desktopWidth - 1;
+}
+
+.nav {
+  &_list {
+    display: flex;
+  }
+
+  &_title {
+    display: block;
+    padding: 50px 15px;
+
+    font-size: 20px;
+    color: $whiteColor;
+
+    cursor: pointer;
+  }
+
+  &_link {
+    font-size: 16px;
+    color: $whiteColor;
+  }
+}
