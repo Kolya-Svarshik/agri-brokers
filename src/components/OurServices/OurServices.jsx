@@ -1,4 +1,4 @@
-import photo from './IMG_1746.JPG';
+import photo from '../../img/IMG_1746.JPG';
 
 import s from './ourServices.module.scss';
 

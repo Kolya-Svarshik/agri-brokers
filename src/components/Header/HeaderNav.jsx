@@ -1,4 +1,4 @@
-import logoImg from './IMG_8766.PNG';
+import logoImg from '../../img/IMG_8766.PNG';
 
 import s from './header.module.scss';
 

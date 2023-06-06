@@ -1,6 +1,6 @@
-import bgVideo from './IMG_1732.MOV';
-import { ReactComponent as FacebookIcon } from './facebook-logo.svg';
-import { ReactComponent as TelegramIcon } from './telegram-logo.svg';
+import bgVideo from '../../media/IMG_1732.MOV';
+import { ReactComponent as FacebookIcon } from '../../img/facebook-logo.svg';
+import { ReactComponent as TelegramIcon } from '../../img/telegram-logo.svg';
 
 import s from './hero.module.scss';
 
@@ -61,7 +61,10 @@ const Hero = () => {
         </ul>
       </section>
       <div className={s.video}>
-        <video width="100%" autoplay loop muted src={bgVideo}></video>
+        <video autoPlay loop muted>
+          <source src={bgVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   );
