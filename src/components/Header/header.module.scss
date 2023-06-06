@@ -37,4 +37,49 @@
     font-size: 16px;
     color: $whiteColor;
   }
+
+  &_elem {
+    position: relative;
+  }
+}
+
+.elem_last {
+  position: absolute;
+  content: '';
+  top: 100px;
+  left: -22px;
+
+  width: 220px;
+  // display: none;
+  // opacity: 0;
+  // transition: 1s;
+  background-color: $whiteColor;
+  padding: 20px;
+  border-radius: 10px;
+
+  z-index: 20;
+}
+
+.elem_link {
+  display: block;
+  font-size: 16px;
+  color: $textColor;
+}
+
+.contact {
+  position: relative;
+
+  &_list {
+    position: absolute;
+    content: '';
+    top: 100px;
+    left: -43px;
+
+    width: 185px;
+    background-color: $whiteColor;
+    padding: 20px;
+    border-radius: 10px;
+
+    z-index: 20;
+  }
 }

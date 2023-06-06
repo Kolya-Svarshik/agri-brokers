@@ -10,7 +10,8 @@ const Hero = () => {
       <section className={s.section}>
         <h1 className={s.hero_title}>Agri Brokers Ukraine</h1>
         <p className={s.hero_text}>
-          Наша мета - забезпечення взаємовигідних контрактів для наших клієнтів.
+          Найкращі контракти з купівлі-продажу продукції сільського
+          господарства.
         </p>
         <div className={s.hero_nav}>
           <a href="#" className={s.hero_button}>
@@ -60,7 +61,7 @@ const Hero = () => {
         </ul>
       </section>
       <div className={s.video}>
-        <video width="100%" autoPlay loop muted src={bgVideo}></video>
+        <video width="100%" autoplay loop muted src={bgVideo}></video>
       </div>
     </div>
   );

@@ -11,6 +11,7 @@
     font-size: 74px;
     line-height: 120%;
     margin-bottom: 30px;
+    color: $whiteColor;
   }
 
   &_text {
@@ -18,6 +19,7 @@
 
     font-weight: 400;
     font-size: 36px;
+    color: $whiteColor;
   }
 
   &_nav {
@@ -45,8 +47,8 @@
 
       &:hover,
       &:focus {
-        color: #fff;
-        background-color: #014213;
+        color: $whiteColor;
+        background-color: $buttonFocusGreenColor;
       }
     }
 
@@ -91,11 +93,12 @@
   &:hover,
   &:focus {
     .social_text {
-      color: #656464;
+      color: $whiteColor;
     }
 
     .icon_button {
-      background: #656464;
+      background: $whiteColor;
+      outline: 3px solid $blackColor;
     }
   }
 }

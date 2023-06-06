@@ -21,16 +21,19 @@ const HeaderNav = () => {
                 Наші Послуги
               </a>
             </li>
-            <li>
+            <li className={s.nav_elem}>
               <a href="#" className={s.nav_title}>
                 Гарячі пропозиції
               </a>
-              {/* <a href="https://t.me/agrosales_sale_grain" className={s.nav_link}>
-              гарячі пропозиції продаж
-            </a>
-            <a href="https://t.me/I_buy_grain" className={s.nav_link}>
-              гарячі пропозиції купівля
-            </a> */}
+              <div className={s.elem_last}>
+                <a href="#" className={s.elem_link}>
+                  Гарячі пропозиції продаж
+                </a>
+                <br></br>
+                <a href="#" className={s.elem_link}>
+                  Гарячі пропозиції купівля
+                </a>
+              </div>
             </li>
             <li>
               <a href="#" className={s.nav_title}>
@@ -39,17 +42,19 @@ const HeaderNav = () => {
             </li>
           </ul>
         </nav>
-        <div>
+        <div className={s.contact}>
           <p className={s.nav_title}>Контакти</p>
-          {/* <a href="tel:+380675211100" className={s.nav_link}>
-            +38 (067) 521 11 00
-          </a>
-          <a href="tel:+380675202508" className={s.nav_link}>
-            +38 (067) 520 25 08
-          </a>
-          <a href="mailto:y.otsabryk@gmail.com" className={s.nav_link}>
-            y.otsabryk@gmail.com
-          </a> */}
+          <div className={s.contact_list}>
+            <a href="tel:+380675211100" className={s.elem_link}>
+              +38 (067) 521 11 00
+            </a>
+            <a href="tel:+380675202508" className={s.elem_link}>
+              +38 (067) 520 25 08
+            </a>
+            <a href="mailto:y.otsabryk@gmail.com" className={s.elem_link}>
+              y.otsabryk@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </header>
