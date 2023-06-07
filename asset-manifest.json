@@ -1,18 +1,24 @@
 {
   "files": {
-    "main.css": "/agri-brokers/static/css/main.20239e7e.css",
-    "main.js": "/agri-brokers/static/js/main.e8e9467c.js",
-    "static/media/IMG_1732.MOV": "/agri-brokers/static/media/IMG_1732.cd2b147e487762fc33c6.MOV",
+    "main.css": "/agri-brokers/static/css/main.b010b525.css",
+    "main.js": "/agri-brokers/static/js/main.0d15e891.js",
+    "static/media/IMG_17321.mp4": "/agri-brokers/static/media/IMG_17321.2ffe970474e755d27dd5.mp4",
     "static/media/IMG_8766.PNG": "/agri-brokers/static/media/IMG_8766.f2423210f70efca01f69.PNG",
     "static/media/IMG_1746.JPG": "/agri-brokers/static/media/IMG_1746.a6a8ae9dd92cd8ccd221.JPG",
-    "static/media/telegram-logo.svg": "/agri-brokers/static/media/telegram-logo.cbc2a41e0d228b765869506562d256e4.svg",
+    "static/media/phone.svg": "/agri-brokers/static/media/phone.0fe920fe3a573c91e98ee67896f6b3d9.svg",
     "index.html": "/agri-brokers/index.html",
-    "static/media/facebook-logo.svg": "/agri-brokers/static/media/facebook-logo.5ea2c000868b20c7ae46a0a932bbfb58.svg",
-    "main.20239e7e.css.map": "/agri-brokers/static/css/main.20239e7e.css.map",
-    "main.e8e9467c.js.map": "/agri-brokers/static/js/main.e8e9467c.js.map"
+    "static/media/telegram-logo.svg": "/agri-brokers/static/media/telegram-logo.1d11c8333c5d0c71dac2003b4bb37511.svg",
+    "static/media/headphone.svg": "/agri-brokers/static/media/headphone.33bfb757677bc4510f0f87c6faf21789.svg",
+    "static/media/locatio.svg": "/agri-brokers/static/media/locatio.ffceb077f9dfa505e282c50eefbcdb3d.svg",
+    "static/media/facebook-logo.svg": "/agri-brokers/static/media/facebook-logo.e24b2417d85772d26fed3230d5f2cfda.svg",
+    "static/media/arrow.svg": "/agri-brokers/static/media/arrow.c72511d32d820ee9e157856eb39d830e.svg",
+    "static/media/mail.svg": "/agri-brokers/static/media/mail.a1f1571236e8ec4853a97c8de547c3c6.svg",
+    "static/media/arrow-up.svg": "/agri-brokers/static/media/arrow-up.9de6fa7723a1dedd9e32dc046a796dcb.svg",
+    "main.b010b525.css.map": "/agri-brokers/static/css/main.b010b525.css.map",
+    "main.0d15e891.js.map": "/agri-brokers/static/js/main.0d15e891.js.map"
   },
   "entrypoints": [
-    "static/css/main.20239e7e.css",
-    "static/js/main.e8e9467c.js"
+    "static/css/main.b010b525.css",
+    "static/js/main.0d15e891.js"
   ]
 }
