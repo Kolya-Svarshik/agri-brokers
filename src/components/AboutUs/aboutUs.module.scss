@@ -1,0 +1,71 @@
+@import '../../style/variables.scss';
+
+.bg_color {
+  background-color: $bgColor;
+}
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  width: $desktopWidth - 1;
+}
+
+.about_tetle {
+  position: relative;
+  margin-bottom: 55px;
+
+  font-size: 40px;
+  font-weight: 600;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 85px;
+    height: 3px;
+    left: 1px;
+    bottom: -15px;
+    background: $buttonGreenColor;
+  }
+}
+
+.cart_item {
+  display: flex;
+  align-items: center;
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .cart_photo {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+
+  &:nth-child(even) {
+    .cart_photo {
+      border-radius: 10px 0 0 10px;
+    }
+  }
+}
+
+.cart_photo {
+  height: 400px;
+}
+
+.cart_elem {
+  padding: 70px 60px;
+}
+
+// .elem_title {
+//   margin-bottom: 30px;
+//   font-size: 28px;
+//   font-weight: 600;
+// }
+
+.elem_text:not(:last-child) {
+  margin-bottom: 16px;
+}

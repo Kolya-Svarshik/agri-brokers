@@ -1,4 +1,6 @@
-import bgVideo from '../../media/IMG_1732.MOV';
+// import bgVideo from '../../media/IMG_1732.MOV';
+// import bgVideo from '../../media/IMG_1732.mp4';
+import bgVideo from '../../media/IMG_17321.mp4';
 import { ReactComponent as FacebookIcon } from '../../img/facebook-logo.svg';
 import { ReactComponent as TelegramIcon } from '../../img/telegram-logo.svg';
 
@@ -61,7 +63,7 @@ const Hero = () => {
         </ul>
       </section>
       <div className={s.video}>
-        <video autoPlay loop muted>
+        <video autoPlay loop muted className={s.video_item}>
           <source src={bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

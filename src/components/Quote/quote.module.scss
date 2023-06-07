@@ -1,0 +1,40 @@
+@import '../../style/variables.scss';
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  width: $desktopWidth - 1;
+}
+
+.quote {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 850px;
+
+  color: $quoteColor;
+  font-size: 18px;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+
+    height: 232px;
+    width: 100%;
+
+    background-image: url(../../img/quote.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    z-index: -1;
+  }
+}

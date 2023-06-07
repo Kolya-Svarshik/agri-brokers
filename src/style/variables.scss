@@ -1,14 +1,23 @@
-//Color
+// Color
 $headerColor: #393939;
 $whiteColor: #fff;
 $blackColor: #000;
 $textColor: #212121;
+$quoteColor: #7b7b7b;
+$textFooterColor: #929292;
 $liskGreenColor: #007120;
 $heroBgc: rgba(0, 0, 0, 0.5);
 $buttonGreenColor: #007120;
 $buttonFocusGreenColor: #014213;
 $buttonTransColor: transparent;
 $linkSocialColor: #deffe8;
+$bgColor: #f0f0f0;
+$bgFooterColor: #343333;
+$borderFooterColor: #515050;
+$bgModalColor: rgba(0, 0, 0, 0.2);
 
-//Section Width
+// Section Width
 $desktopWidth: 1200px;
+
+// Cubic-bezier
+$timingFunction: cubic-bezier(0.4, 0, 0.2, 1);

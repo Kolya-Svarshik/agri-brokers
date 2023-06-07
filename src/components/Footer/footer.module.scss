@@ -1,0 +1,282 @@
+@import '../../style/variables.scss';
+
+.footer {
+  background-color: $bgFooterColor;
+}
+
+.border {
+  border-bottom: 1px solid $borderFooterColor;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: $desktopWidth - 1;
+}
+
+.logo {
+  margin-bottom: 20px;
+
+  &_text {
+    width: 300px;
+    margin-bottom: 20px;
+
+    color: $whiteColor;
+  }
+}
+
+.social {
+  color: $whiteColor;
+
+  &_tetle {
+    margin-bottom: 20px;
+  }
+
+  &_bloc {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_text {
+    color: $whiteColor;
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+      .icon_button {
+        background: $blackColor;
+      }
+
+      path {
+        fill: $whiteColor;
+      }
+    }
+  }
+}
+
+.icon_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background: $whiteColor;
+  transition: 0.5s;
+}
+
+.icon_facebook {
+  width: 35px;
+  height: 35px;
+  fill: $blackColor;
+}
+
+.nav {
+  &_title {
+    margin-bottom: 20px;
+
+    color: $whiteColor;
+
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &_list {
+    margin-bottom: 42px;
+  }
+
+  &_item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_text {
+    color: $whiteColor;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    span {
+      position: relative;
+    }
+
+    span::after {
+      position: absolute;
+      content: ' ';
+      display: block;
+      width: 0;
+      height: 2px;
+
+      bottom: -2px;
+
+      background-color: $whiteColor;
+
+      transition: 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+      span::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 40px;
+    color: $whiteColor;
+    background: $buttonTransColor;
+
+    border: 1px solid $whiteColor;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    height: unset;
+
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+      background: $blackColor;
+      border: 1px solid $blackColor;
+    }
+  }
+}
+
+.icon_headphone {
+  margin-right: 5px;
+
+  fill: $whiteColor;
+}
+
+.contact {
+  &_title {
+    margin-bottom: 20px;
+
+    color: $whiteColor;
+
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &_list {
+    width: 300px;
+  }
+
+  &_item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_text {
+    margin-left: 20px;
+
+    color: $textFooterColor;
+
+    line-height: 1.8;
+  }
+
+  &_link {
+    display: flex;
+    margin-bottom: 5px;
+
+    color: $whiteColor;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    span {
+      position: relative;
+    }
+
+    span::after {
+      position: absolute;
+      content: ' ';
+      display: block;
+      width: 0;
+      height: 2px;
+
+      bottom: -2px;
+
+      background-color: $whiteColor;
+
+      transition: 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+      span::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.icon_tel {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+
+  fill: $whiteColor;
+}
+
+.icon_mail {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+
+  fill: $whiteColor;
+}
+
+.icon_geo {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+
+  fill: $whiteColor;
+}
+
+.copy {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  width: $desktopWidth - 1;
+
+  border-top: 1px solid $borderFooterColor;
+
+  &_text {
+    color: $whiteColor;
+  }
+}
