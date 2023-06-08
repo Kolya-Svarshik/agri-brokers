@@ -60,8 +60,6 @@ textarea {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .active {
@@ -81,6 +79,13 @@ textarea {
 @media screen and (max-width: ($modilWidth - 1px)) {
   .container {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: $modilWidth) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

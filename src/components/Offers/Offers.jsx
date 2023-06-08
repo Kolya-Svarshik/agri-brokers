@@ -8,9 +8,8 @@ const Offers = () => {
     <section className="container">
       <div className={s.section}>
         <h2 className={s.offers_tetle}>Ми пропонуємо</h2>
-        <div className={s.cart}>
-          <div className={s.cart_item}>
-            <img src={photo} className={s.cart_photo}></img>
+        <ul className={s.cart}>
+          <li className={s.cart_item}>
             <div className={s.cart_elem}>
               <h3 className={s.elem_title}>Для виробників с/г продукції</h3>
               <p className={s.elem_text}>
@@ -33,9 +32,9 @@ const Offers = () => {
                 <p>Продаж зерна</p>
               </a>
             </div>
-          </div>
-          <div className={s.cart_item}>
             <img src={photo} className={s.cart_photo}></img>
+          </li>
+          <li className={s.cart_item}>
             <div className={s.cart_elem}>
               <h3 className={s.elem_title}>Для переробників</h3>
               <p className={s.elem_text}>
@@ -57,9 +56,9 @@ const Offers = () => {
                 <p>Купівля зерна</p>
               </a>
             </div>
-          </div>
-          <div className={s.cart_item}>
             <img src={photo} className={s.cart_photo}></img>
+          </li>
+          <li className={s.cart_item}>
             <div className={s.cart_elem}>
               <h3 className={s.elem_title}>Для переробників</h3>
               <p className={s.elem_text}>
@@ -71,8 +70,9 @@ const Offers = () => {
                 надійної підтримки у вашому сільськогосподарському бізнесі.
               </p>
             </div>
-          </div>
-        </div>
+            <img src={photo} className={s.cart_photo}></img>
+          </li>
+        </ul>
       </div>
     </section>
   );

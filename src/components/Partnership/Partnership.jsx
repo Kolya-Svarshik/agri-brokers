@@ -10,7 +10,6 @@ const Partnership = () => {
           <h2 className={s.partnership_tetle}>Партнерство</h2>
           <div className={s.cart}>
             <div className={s.cart_item}>
-              <img src={photo} className={s.cart_photo}></img>
               <div className={s.cart_elem}>
                 <h3 className={s.elem_title}>Для виробників с/г продукції</h3>
                 <p className={s.elem_text}>
@@ -24,6 +23,7 @@ const Partnership = () => {
                 </p>
                 <a className={s.elem_lisk}>Отримати консультацію</a>
               </div>
+              <img src={photo} className={s.cart_photo}></img>
             </div>
           </div>
         </div>

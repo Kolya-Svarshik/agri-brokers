@@ -8,9 +8,8 @@ const AboutUs = () => {
       <section className="container">
         <div className={s.section}>
           <h2 className={s.about_tetle}>Про нас</h2>
-          <div className={s.cart}>
-            <div className={s.cart_item}>
-              <img src={photo} className={s.cart_photo}></img>
+          <ul className={s.cart}>
+            <li className={s.cart_item}>
               <div className={s.cart_elem}>
                 {/* <h3 className={s.elem_title}>Для виробників с/г продукції</h3> */}
                 <p className={s.elem_text}>
@@ -23,9 +22,9 @@ const AboutUs = () => {
                   покупцями, забезпечуючи швидкі угоди та надійні контракти.
                 </p>
               </div>
-            </div>
-            <div className={s.cart_item}>
               <img src={photo} className={s.cart_photo}></img>
+            </li>
+            <li className={s.cart_item}>
               <div className={s.cart_elem}>
                 {/* <h3 className={s.elem_title}>Для переробників</h3> */}
                 <p className={s.elem_text}>
@@ -37,9 +36,9 @@ const AboutUs = () => {
                   сої, ріпаку, соняшникового масла, пшениці та інших продуктів.
                 </p>
               </div>
-            </div>
-            <div className={s.cart_item}>
               <img src={photo} className={s.cart_photo}></img>
+            </li>
+            <li className={s.cart_item}>
               <div className={s.cart_elem}>
                 {/* <h3 className={s.elem_title}>Для переробників</h3> */}
                 <p className={s.elem_text}>
@@ -52,8 +51,9 @@ const AboutUs = () => {
                   сільськогосподарському бізнесі.
                 </p>
               </div>
-            </div>
-          </div>
+              <img src={photo} className={s.cart_photo}></img>
+            </li>
+          </ul>
         </div>
       </section>
     </div>

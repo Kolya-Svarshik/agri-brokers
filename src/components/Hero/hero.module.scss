@@ -19,7 +19,7 @@
 
     color: $whiteColor;
 
-    font-weight: 400;
+    font-weight: 600;
   }
 
   &_nav {
@@ -31,11 +31,16 @@
     justify-content: center;
     align-items: center;
 
+    width: 80px;
+    height: 20px;
+
     color: $whiteColor;
     border-radius: 100px;
     transition: 0.5s;
 
     &:first-child {
+      margin-bottom: 20px;
+
       background: $buttonGreenColor;
 
       &:hover,
@@ -91,6 +96,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5px;
+  height: 50px;
+  width: 50px;
 
   border-radius: 100%;
   background: $linkSocialColor;
@@ -112,6 +119,9 @@
 .social_text {
   color: $whiteColor;
   transition: 0.5s;
+
+  font-size: 14px;
+  text-align: center;
 }
 
 .video {
@@ -126,8 +136,52 @@
 
 @media screen and (min-width: $modilWidth) {
   .hero {
-    padding: 45px 20px 120px;
+    &_button {
+      width: 80px;
+      height: 20px;
 
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: ($modilBigWidth - 1px)) {
+  .hero {
+    padding: 45px 20px 120px;
+  }
+}
+
+@media screen and (min-width: $modilBigWidth) {
+  .hero_nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: $modilBigWidth) and (max-width: ($tabletBigWidth - 1px)) {
+  .hero {
+    padding: 80px 20px 200px;
+  }
+}
+
+@media screen and (max-width: ($tabletWidth - 1px)) {
+  .hero_button {
+    padding: 15px 40px;
+  }
+}
+
+@media screen and (min-width: $tabletWidth) {
+  .hero_button {
+    padding: 15px 65px;
+  }
+}
+
+@media screen and (max-width: ($tabletBigWidth - 1px)) {
+  .hero {
     &_title {
       font-weight: 500;
       font-size: 38px;
@@ -136,30 +190,39 @@
     &_text {
       font-size: 18px;
     }
-
-    &_button {
-      width: 80px;
-      height: 20px;
-      padding: 15px 40px;
-
-      &:first-child {
-        margin-bottom: 20px;
-      }
-    }
-  }
-
-  .icon_button {
-    height: 50px;
-    width: 50px;
-  }
-
-  .social_text {
-    font-size: 14px;
-    text-align: center;
   }
 
   .video_item {
     height: 100%;
+  }
+}
+
+@media screen and (min-width: $tabletBigWidth) {
+  .hero {
+    &_title {
+      font-weight: 700;
+      font-size: 48px;
+    }
+
+    &_text {
+      font-size: 24px;
+    }
+  }
+
+  .video_item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: $tabletBigWidth) and (max-width: ($desktopWidth - 1px)) {
+  .hero {
+    padding: 120px 20px 80px;
+  }
+}
+
+@media screen and (min-width: $desktopWidth) {
+  .hero {
+    padding: 200px 20px 200px;
   }
 }
 

@@ -19,15 +19,15 @@ export default function App() {
     <div className={isActive && 'active'}>
       <Header isActive={isActive} setIsActive={setIsActive} />
       <Hero />
-      {/* <OurServices />
+      <OurServices />
       <AboutUs />
       <Offers />
       <Partnership />
       <Quote />
       <Map />
-      <Modal />
+      {/* <Modal /> */}
       <ArrowScroll />
-      <Footer /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
