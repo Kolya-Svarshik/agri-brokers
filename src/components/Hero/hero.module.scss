@@ -4,30 +4,25 @@
   position: relative;
   background-color: $heroBgc;
 
+  margin-top: 100px;
+
   overflow: hidden;
 
   &_title {
-    font-weight: 700;
-    font-size: 74px;
-    line-height: 120%;
     margin-bottom: 30px;
+
     color: $whiteColor;
   }
 
   &_text {
     margin-bottom: 30px;
 
-    font-weight: 400;
-    font-size: 36px;
     color: $whiteColor;
+
+    font-weight: 400;
   }
 
   &_nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    width: fit-content;
-
     margin-bottom: 30px;
   }
 
@@ -35,9 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px;
-    width: 209px;
-    height: 51px;
+
     color: $whiteColor;
     border-radius: 100px;
     transition: 0.5s;
@@ -67,22 +60,11 @@
 }
 
 .section {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 180px;
-  padding-bottom: 100px;
-
   z-index: 1;
-
-  width: $desktopWidth - 1;
 }
 
 .link_social {
   display: flex;
-
-  margin-bottom: 80px;
 }
 
 .link_item {
@@ -98,7 +80,6 @@
 
     .icon_button {
       background: $whiteColor;
-      outline: 3px solid $blackColor;
     }
   }
 }
@@ -111,8 +92,6 @@
   margin-right: auto;
   margin-bottom: 5px;
 
-  height: 60px;
-  width: 60px;
   border-radius: 100%;
   background: $linkSocialColor;
   transition: 0.5s;
@@ -143,8 +122,187 @@
   height: 100%;
 
   z-index: -1;
+}
 
-  &_item {
-    width: 100vw;
+@media screen and (min-width: $modilWidth) {
+  .hero {
+    padding: 45px 20px 120px;
+
+    &_title {
+      font-weight: 500;
+      font-size: 38px;
+    }
+
+    &_text {
+      font-size: 18px;
+    }
+
+    &_button {
+      width: 80px;
+      height: 20px;
+      padding: 15px 40px;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .icon_button {
+    height: 50px;
+    width: 50px;
+  }
+
+  .social_text {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .video_item {
+    height: 100%;
   }
 }
+
+// .hero {
+//   position: relative;
+//   background-color: $heroBgc;
+
+//   overflow: hidden;
+
+//   &_title {
+//     font-weight: 700;
+//     font-size: 74px;
+//     line-height: 120%;
+//     margin-bottom: 30px;
+//     color: $whiteColor;
+//   }
+
+//   &_text {
+//     margin-bottom: 30px;
+
+//     font-weight: 400;
+//     font-size: 36px;
+//     color: $whiteColor;
+//   }
+
+//   &_nav {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 40px;
+//     width: fit-content;
+
+//     margin-bottom: 30px;
+//   }
+
+//   &_button {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 8px 20px;
+//     width: 209px;
+//     height: 51px;
+//     color: $whiteColor;
+//     border-radius: 100px;
+//     transition: 0.5s;
+
+//     &:first-child {
+//       background: $buttonGreenColor;
+
+//       &:hover,
+//       &:focus {
+//         color: $whiteColor;
+//         background-color: $buttonFocusGreenColor;
+//       }
+//     }
+
+//     &:last-child {
+//       border: 2px solid $whiteColor;
+//       background-color: transparent;
+
+//       &:hover,
+//       &:focus {
+//         color: $whiteColor;
+//         border-color: $blackColor;
+//         background-color: $blackColor;
+//       }
+//     }
+//   }
+// }
+
+// .section {
+//   padding-top: 180px;
+//   padding-bottom: 100px;
+
+//   z-index: 1;
+// }
+
+// .link_social {
+//   display: flex;
+
+//   margin-bottom: 80px;
+// }
+
+// .link_item {
+//   &:not(:last-child) {
+//     margin-right: 20px;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     .social_text {
+//       color: $whiteColor;
+//     }
+
+//     .icon_button {
+//       background: $whiteColor;
+//       outline: 3px solid $blackColor;
+//     }
+//   }
+// }
+
+// .icon_button {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 5px;
+
+//   height: 60px;
+//   width: 60px;
+//   border-radius: 100%;
+//   background: $linkSocialColor;
+//   transition: 0.5s;
+// }
+
+// .icon_facebook {
+//   width: 35px;
+//   height: 35px;
+//   fill: $blackColor;
+// }
+
+// .icon_telegram {
+//   width: 35px;
+//   height: 35px;
+//   fill: $blackColor;
+// }
+
+// .social_text {
+//   color: $whiteColor;
+//   transition: 0.5s;
+// }
+
+// .video {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+
+//   z-index: -1;
+
+//   &_item {
+//     width: 100vw;
+//     // height: 100vw;
+//   }
+// }

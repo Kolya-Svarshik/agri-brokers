@@ -7,21 +7,27 @@ import Partnership from './components/Partnership/Partnership';
 import Quote from './components/Quote/Quote';
 import Map from './components/Map/Map';
 import Modal from './components/Modal/Modal';
+import ArrowScroll from './components/ArrowScroll/ArrowScroll';
 import Footer from './components/Footer/Footer';
 
+import { useState } from 'react';
+
 export default function App() {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <>
-      <Header />
+    <div className={isActive && 'active'}>
+      <Header isActive={isActive} setIsActive={setIsActive} />
       <Hero />
-      <OurServices />
+      {/* <OurServices />
       <AboutUs />
       <Offers />
       <Partnership />
       <Quote />
       <Map />
-      {/* <Modal /> */}
-      <Footer />
-    </>
+      <Modal />
+      <ArrowScroll />
+      <Footer /> */}
+    </div>
   );
 }

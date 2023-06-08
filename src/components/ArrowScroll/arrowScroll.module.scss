@@ -1,0 +1,28 @@
+@import '../../style/variables.scss';
+
+.arrow_scroll {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 2%;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+
+  background-color: $buttonGreenColor;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  z-index: 100;
+}
+
+.icon_arrow_scroll {
+  width: 25px;
+  height: 25px;
+
+  path {
+    fill: $whiteColor;
+  }
+}
