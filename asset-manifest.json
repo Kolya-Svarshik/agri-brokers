@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/agri-brokers/static/css/main.b010b525.css",
-    "main.js": "/agri-brokers/static/js/main.0d15e891.js",
+    "main.css": "/agri-brokers/static/css/main.7fd74b32.css",
+    "main.js": "/agri-brokers/static/js/main.93287659.js",
     "static/media/IMG_17321.mp4": "/agri-brokers/static/media/IMG_17321.2ffe970474e755d27dd5.mp4",
     "static/media/IMG_8766.PNG": "/agri-brokers/static/media/IMG_8766.f2423210f70efca01f69.PNG",
     "static/media/IMG_1746.JPG": "/agri-brokers/static/media/IMG_1746.a6a8ae9dd92cd8ccd221.JPG",
@@ -14,11 +14,11 @@
     "static/media/arrow.svg": "/agri-brokers/static/media/arrow.c72511d32d820ee9e157856eb39d830e.svg",
     "static/media/mail.svg": "/agri-brokers/static/media/mail.a1f1571236e8ec4853a97c8de547c3c6.svg",
     "static/media/arrow-up.svg": "/agri-brokers/static/media/arrow-up.9de6fa7723a1dedd9e32dc046a796dcb.svg",
-    "main.b010b525.css.map": "/agri-brokers/static/css/main.b010b525.css.map",
-    "main.0d15e891.js.map": "/agri-brokers/static/js/main.0d15e891.js.map"
+    "main.7fd74b32.css.map": "/agri-brokers/static/css/main.7fd74b32.css.map",
+    "main.93287659.js.map": "/agri-brokers/static/js/main.93287659.js.map"
   },
   "entrypoints": [
-    "static/css/main.b010b525.css",
-    "static/js/main.0d15e891.js"
+    "static/css/main.7fd74b32.css",
+    "static/js/main.93287659.js"
   ]
 }
