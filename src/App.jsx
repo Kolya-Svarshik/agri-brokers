@@ -27,7 +27,7 @@ export default function App() {
       <Map />
       {/* <Modal /> */}
       <ArrowScroll />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

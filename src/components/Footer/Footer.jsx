@@ -1,4 +1,5 @@
 import logoImg from '../../img/IMG_8766.PNG';
+import { ReactComponent as ArrowIcon } from '../../img/arrow.svg';
 import { ReactComponent as FacebookIcon } from '../../img/facebook-logo.svg';
 import { ReactComponent as HeadphoneIcon } from '../../img/headphone.svg';
 import { ReactComponent as PhoneIcon } from '../../img/phone.svg';
@@ -13,23 +14,28 @@ const Footer = () => {
       <div className="container">
         <div className={s.section}>
           <div className={s.logo_bloc}>
-            <a href="#">
-              <img
-                src={logoImg}
-                width="200px"
-                alt="Logo"
-                className={s.logo}
-              ></img>
-            </a>
-            <p className={s.logo_text}>
-              Agri Brokers Ukraine - це брокерська компанія, яка спеціалізується
-              на допомозі фермерам у продажу зернових культур за вигідними
-              цінами. Маючи великий досвід та знання галузі, ми надаємо цінні
-              рекомендації та підтримку як фермерам, так і трейдерам при
-              купівлі-продажу різних зернових товарів.
-            </p>
+            <div className={s.logo_sheave}>
+              <a href="#">
+                <img
+                  src={logoImg}
+                  width="200px"
+                  alt="Logo"
+                  className={s.logo}
+                ></img>
+              </a>
+              <p className={s.logo_text}>
+                Agri Brokers Ukraine - це брокерська компанія, яка
+                спеціалізується на допомозі фермерам у продажу зернових культур
+                за вигідними цінами. Маючи великий досвід та знання галузі, ми
+                надаємо цінні рекомендації та підтримку як фермерам, так і
+                трейдерам при купівлі-продажу різних зернових товарів.
+              </p>
+            </div>
             <div className={s.social}>
-              <p className={s.social_tetle}>СЛІДКУЙТЕ ЗА НАМИ</p>
+              <div className={s.social_container}>
+                <p className={s.social_tetle}>СЛІДКУЙТЕ ЗА НАМИ</p>
+                <ArrowIcon className={s.icon_arrow} />
+              </div>
               <div className={s.social_bloc}>
                 <a
                   href="https://www.facebook.com/profile.php?id=100093057441973"
@@ -45,7 +51,10 @@ const Footer = () => {
             </div>
           </div>
           <nav className={s.nav}>
-            <p className={s.nav_title}>МЕНЮ САЙТУ</p>
+            <div className={s.nav_container}>
+              <p className={s.nav_title}>МЕНЮ САЙТУ</p>
+              <ArrowIcon className={s.icon_arrow} />
+            </div>
             <ul className={s.nav_list}>
               <li className={s.nav_item}>
                 <a href="#" className={s.nav_text}>
@@ -78,7 +87,10 @@ const Footer = () => {
             </a>
           </nav>
           <div className={s.contact}>
-            <p className={s.contact_title}>Контакти</p>
+            <div className={s.contact_container}>
+              <p className={s.contact_title}>Контакти</p>
+              <ArrowIcon className={s.icon_arrow} />
+            </div>
 
             <ul className={s.contact_list}>
               <li className={s.contact_item}>

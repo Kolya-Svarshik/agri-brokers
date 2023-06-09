@@ -44,10 +44,22 @@ const Header = ({ isActive, setIsActive }) => {
                     <span>Про нас</span>
                   </a>
                 </li>
-                <li className={s.nav_item}>
+                <li className={`${s.nav_elem} ${s.nav_item}`}>
                   <a href="#" className={s.nav_title}>
                     <span>Наші Послуги</span>
+                    <ArrowIcon className={s.icon_arrow} />
                   </a>
+                  <div className={s.elem_list}>
+                    <a href="#" className={s.elem_link}>
+                      <span>Для виробників с/г продукції</span>
+                    </a>
+                    <a href="#" className={s.elem_link}>
+                      <span>Для переробників</span>
+                    </a>
+                    <a href="#" className={s.elem_link}>
+                      <span>Для трейдерів</span>
+                    </a>
+                  </div>
                 </li>
                 <li className={`${s.nav_elem} ${s.nav_item}`}>
                   <a href="#" className={s.nav_title}>
