@@ -1,0 +1,14 @@
+@import '../../style/variables.scss';
+
+.copy {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &_text {
+    color: $whiteColor;
+  }
+}

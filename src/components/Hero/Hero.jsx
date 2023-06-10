@@ -1,6 +1,5 @@
 import bgVideo from '../../media/IMG_17321.mp4';
-import { ReactComponent as FacebookIcon } from '../../img/facebook-logo.svg';
-import { ReactComponent as TelegramIcon } from '../../img/telegram-logo.svg';
+import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 
 import s from './hero.module.scss';
 
@@ -30,7 +29,7 @@ const Hero = () => {
                 className={s.social_text}
               >
                 <div className={s.icon_button}>
-                  <FacebookIcon className={s.icon_facebook} />
+                  <FaFacebookF className={s.icon_facebook} />
                 </div>
                 <p>Наш Facebook</p>
               </a>
@@ -42,7 +41,7 @@ const Hero = () => {
                 className={s.social_text}
               >
                 <div className={s.icon_button}>
-                  <TelegramIcon className={s.icon_telegram} />
+                  <FaTelegramPlane className={s.icon_telegram} />
                 </div>
                 <p>Продаж зерна</p>
               </a>
@@ -54,7 +53,7 @@ const Hero = () => {
                 className={s.social_text}
               >
                 <div className={s.icon_button}>
-                  <TelegramIcon className={s.icon_telegram} />
+                  <FaTelegramPlane className={s.icon_telegram} />
                 </div>
                 <p>Купівля зерна</p>
               </a>
@@ -63,7 +62,7 @@ const Hero = () => {
         </div>
       </section>
       <div className={s.video}>
-        <video autoPlay loop muted className={s.video_item}>
+        <video autoPlay loop muted playsInline className={s.video_item}>
           <source src={bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

@@ -105,15 +105,16 @@
 }
 
 .icon_facebook {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   fill: $blackColor;
 }
 
 .icon_telegram {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   fill: $blackColor;
+  // color: $blackColor;
 }
 
 .social_text {
@@ -191,10 +192,6 @@
       font-size: 18px;
     }
   }
-
-  .video_item {
-    height: 100%;
-  }
 }
 
 @media screen and (min-width: $tabletBigWidth) {
@@ -208,21 +205,33 @@
       font-size: 24px;
     }
   }
-
-  .video_item {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: $tabletBigWidth) and (max-width: ($desktopWidth - 1px)) {
   .hero {
     padding: 120px 20px 80px;
   }
+
+  .video_item {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: $desktopWidth) {
   .hero {
     padding: 200px 20px 200px;
+  }
+}
+
+@media screen and (min-width: $desktopWidth) and (max-width: 1284px) {
+  .video_item {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1285px) {
+  .video_item {
+    width: 100%;
   }
 }
 

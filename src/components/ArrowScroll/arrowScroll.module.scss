@@ -5,13 +5,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 2%;
+  left: 3%;
   bottom: 40px;
   width: 40px;
   height: 40px;
 
-  background-color: $buttonGreenColor;
   border-radius: 50%;
+  background-color: $buttonGreenColor;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
   cursor: pointer;
 
@@ -19,8 +20,8 @@
 }
 
 .icon_arrow_scroll {
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 
   path {
     fill: $whiteColor;

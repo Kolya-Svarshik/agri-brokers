@@ -55,8 +55,9 @@
 
 @media screen and (max-width: ($tabletBigWidth - 1px)) {
   .cart_photo {
-    height: 100%;
     padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

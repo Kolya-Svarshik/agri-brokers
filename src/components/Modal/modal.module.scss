@@ -29,13 +29,16 @@
 }
 
 .modal {
+  position: relative;
   display: block;
   justify-content: center;
   position: absolute;
+
   top: 50%;
   left: 50%;
 
-  padding: 40px;
+  padding: 30px;
+
   border-radius: 4px;
 
   background-color: $whiteColor;
@@ -46,4 +49,205 @@
   transform: translate(-50%, -50%) scale(1);
 
   transition: 1;
+}
+
+.data_titel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 240px;
+
+  margin-top: 5px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.data_text {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.icon_headphone {
+  display: block;
+
+  width: 30px;
+  height: 30px;
+
+  margin-right: 10px;
+
+  path {
+    fill: $blackColor;
+  }
+}
+
+.form_item {
+  position: relative;
+}
+
+.input_item {
+  // width: 260px;
+  height: 40px;
+  padding: 5px 15px;
+
+  border: 1px solid $borderInpusColor;
+  border-radius: 4px;
+
+  color: $textColor;
+  background-color: $whiteColor;
+
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input_textarea {
+  // width: 260px;
+  height: 40px;
+  padding: 15px;
+
+  border: 1px solid $borderInpusColor;
+  border-radius: 4px;
+
+  color: $textColor;
+  background-color: $whiteColor;
+
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input_text {
+  position: absolute;
+  left: 15px;
+  top: -5px;
+  padding: 0 5px;
+
+  color: $textInpusColor;
+  background: $whiteColor;
+
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  cursor: default;
+}
+
+.button_submit {
+  display: block;
+  height: 40px;
+  padding: 0 20px;
+
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: $formButtonColor;
+
+  color: $whiteColor;
+  background-color: $formButtonColor;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 38px;
+  text-align: center;
+
+  font-family: inherit;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $formButtonColor;
+    background-color: $whiteColor;
+  }
+}
+
+.button_close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 4px;
+  right: 4px;
+  padding: 6px;
+
+  border: 1px solid $buttonTransColor;
+  border-radius: 50%;
+  background-color: $buttonTransColor;
+
+  transition: all 0.2s ease-in-out;
+
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    border-color: $blackColor;
+  }
+}
+
+.icon_close {
+  width: 15px;
+  height: 15px;
+}
+
+@media screen and (max-width: ($modilWidth - 1px)) {
+  .modal {
+    width: calc(100% - 2 * 40px);
+  }
+
+  .input_item {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .input_textarea {
+    display: block;
+    width: 100%;
+    height: 72px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: $modilWidth) {
+  .input_item {
+    width: 260px;
+  }
+
+  .input_textarea {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: ($tabletWidth - 1px)) {
+  .form_item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .button_submit {
+    width: 100%;
+  }
+  .icon_headphone {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tabletWidth) {
+  .form_item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-height: 375px) {
+  .modal {
+    height: calc(100% - 2 * 30px);
+    overflow-x: scroll;
+  }
 }

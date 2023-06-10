@@ -1,5 +1,6 @@
+import { FaTelegramPlane } from 'react-icons/fa';
+
 import photo from '../../img/IMG_1746.JPG';
-import { ReactComponent as TelegramIcon } from '../../img/telegram-logo.svg';
 
 import s from './offers.module.scss';
 
@@ -27,7 +28,7 @@ const Offers = () => {
                 className={s.social_text}
               >
                 <div className={s.icon_button}>
-                  <TelegramIcon className={s.icon_telegram} />
+                  <FaTelegramPlane className={s.icon_telegram} />
                 </div>
                 <p>Продаж зерна</p>
               </a>
@@ -51,7 +52,7 @@ const Offers = () => {
                 className={s.social_text}
               >
                 <div className={s.icon_button}>
-                  <TelegramIcon className={s.icon_telegram} />
+                  <FaTelegramPlane className={s.icon_telegram} />
                 </div>
                 <p>Купівля зерна</p>
               </a>

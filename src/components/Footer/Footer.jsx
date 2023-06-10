@@ -1,14 +1,23 @@
+import Copy from '../Copy/Copy';
+import { useState } from 'react';
+
 import logoImg from '../../img/IMG_8766.PNG';
-import { ReactComponent as ArrowIcon } from '../../img/arrow.svg';
-import { ReactComponent as FacebookIcon } from '../../img/facebook-logo.svg';
+import { FaFacebookF } from 'react-icons/fa';
+import { FiPhoneCall } from 'react-icons/fi';
+import { AiOutlineMail } from 'react-icons/ai';
+import { MdLocationPin } from 'react-icons/md';
+import { IoIosArrowDown } from 'react-icons/io';
+
 import { ReactComponent as HeadphoneIcon } from '../../img/headphone.svg';
-import { ReactComponent as PhoneIcon } from '../../img/phone.svg';
-import { ReactComponent as MailIcon } from '../../img/mail.svg';
-import { ReactComponent as GeoIcon } from '../../img/locatio.svg';
 
 import s from './footer.module.scss';
 
 const Footer = () => {
+  // const [isActive, setIsActive] = useState(false);
+  // const open = () => {
+  //   setIsActive(!isActive);
+  // };
+
   return (
     <footer className={s.footer}>
       <div className="container">
@@ -34,7 +43,7 @@ const Footer = () => {
             <div className={s.social}>
               <div className={s.social_container}>
                 <p className={s.social_tetle}>СЛІДКУЙТЕ ЗА НАМИ</p>
-                <ArrowIcon className={s.icon_arrow} />
+                <IoIosArrowDown className={s.icon_arrow} />
               </div>
               <div className={s.social_bloc}>
                 <a
@@ -43,7 +52,7 @@ const Footer = () => {
                   className={s.social_text}
                 >
                   <div className={s.icon_button}>
-                    <FacebookIcon className={s.icon_facebook} />
+                    <FaFacebookF className={s.icon_facebook} />
                   </div>
                   <p>Наш Facebook</p>
                 </a>
@@ -53,7 +62,7 @@ const Footer = () => {
           <nav className={s.nav}>
             <div className={s.nav_container}>
               <p className={s.nav_title}>МЕНЮ САЙТУ</p>
-              <ArrowIcon className={s.icon_arrow} />
+              <IoIosArrowDown className={s.icon_arrow} />
             </div>
             <ul className={s.nav_list}>
               <li className={s.nav_item}>
@@ -89,18 +98,18 @@ const Footer = () => {
           <div className={s.contact}>
             <div className={s.contact_container}>
               <p className={s.contact_title}>Контакти</p>
-              <ArrowIcon className={s.icon_arrow} />
+              <IoIosArrowDown className={s.icon_arrow} />
             </div>
 
             <ul className={s.contact_list}>
               <li className={s.contact_item}>
                 <p className={s.contact_text}>Телефони:</p>
                 <a href="tel:+380675211100" className={s.contact_link}>
-                  <PhoneIcon className={s.icon_tel} />
+                  <FiPhoneCall className={s.icon_tel} />
                   <span>+38 (067) 521 11 00</span>
                 </a>
                 <a href="tel:+380675202508" className={s.contact_link}>
-                  <PhoneIcon className={s.icon_tel} />
+                  <FiPhoneCall className={s.icon_tel} />
                   <span>+38 (067) 520 25 08</span>
                 </a>
               </li>
@@ -110,7 +119,7 @@ const Footer = () => {
                   href="mailto:y.otsabryk@gmail.com"
                   className={s.contact_link}
                 >
-                  <MailIcon className={s.icon_mail} />
+                  <AiOutlineMail className={s.icon_mail} />
                   <span>y.otsabryk@gmail.com</span>
                 </a>
               </li>
@@ -121,16 +130,14 @@ const Footer = () => {
                   target="_blank"
                   className={s.contact_link}
                 >
-                  <GeoIcon className={s.icon_geo} />
+                  <MdLocationPin className={s.icon_geo} />
                   <span>вулиця Академіка Вільямса, 2б</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-      <div className={s.copy}>
-        <p className={s.copy_text}>&copy; 2023 Всі права захищені.</p>
+        <Copy />
       </div>
     </footer>
   );

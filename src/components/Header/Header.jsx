@@ -1,9 +1,9 @@
 import logoImg from '../../img/IMG_8766.PNG';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { ReactComponent as FacebookIcon } from '../../img/facebook-logo.svg';
-import { ReactComponent as ArrowIcon } from '../../img/arrow.svg';
-import { ReactComponent as PhoneIcon } from '../../img/phone.svg';
-import { ReactComponent as MailIcon } from '../../img/mail.svg';
+import { FaFacebookF } from 'react-icons/fa';
+import { FiPhoneCall } from 'react-icons/fi';
+import { AiOutlineMail } from 'react-icons/ai';
+import { IoIosArrowDown } from 'react-icons/io';
 
 import s from './header.module.scss';
 
@@ -47,34 +47,43 @@ const Header = ({ isActive, setIsActive }) => {
                 <li className={`${s.nav_elem} ${s.nav_item}`}>
                   <a href="#" className={s.nav_title}>
                     <span>Наші Послуги</span>
-                    <ArrowIcon className={s.icon_arrow} />
+                    <IoIosArrowDown className={s.icon_arrow} />
                   </a>
-                  <div className={s.elem_list}>
-                    <a href="#" className={s.elem_link}>
-                      <span>Для виробників с/г продукції</span>
-                    </a>
-                    <a href="#" className={s.elem_link}>
-                      <span>Для переробників</span>
-                    </a>
-                    <a href="#" className={s.elem_link}>
-                      <span>Для трейдерів</span>
-                    </a>
-                  </div>
+                  <ul className={s.elem_list}>
+                    <li className={s.elem_item}>
+                      <a href="#" className={s.elem_link}>
+                        <span>Для виробників с/г продукції</span>
+                      </a>
+                    </li>
+                    <li className={s.elem_item}>
+                      <a href="#" className={s.elem_link}>
+                        <span>Для переробників</span>
+                      </a>
+                    </li>
+                    <li className={s.elem_item}>
+                      <a href="#" className={s.elem_link}>
+                        <span>Для трейдерів</span>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li className={`${s.nav_elem} ${s.nav_item}`}>
                   <a href="#" className={s.nav_title}>
                     <span>Гарячі пропозиції</span>
-                    <ArrowIcon className={s.icon_arrow} />
+                    <IoIosArrowDown className={s.icon_arrow} />
                   </a>
-                  <div className={s.elem_list}>
-                    <a href="#" className={s.elem_link}>
-                      <span>Гарячі пропозиції продаж</span>
-                    </a>
-                    <br></br>
-                    <a href="#" className={s.elem_link}>
-                      <span>Гарячі пропозиції купівля</span>
-                    </a>
-                  </div>
+                  <ul className={s.elem_list}>
+                    <li className={s.elem_item}>
+                      <a href="#" className={s.elem_link}>
+                        <span>Гарячі пропозиції продаж</span>
+                      </a>
+                    </li>
+                    <li className={s.elem_item}>
+                      <a href="#" className={s.elem_link}>
+                        <span>Гарячі пропозиції купівля</span>
+                      </a>
+                    </li>
+                  </ul>
                 </li>
                 <li className={s.nav_item}>
                   <a href="#" className={s.nav_title}>
@@ -113,7 +122,7 @@ const Header = ({ isActive, setIsActive }) => {
                     target="_blank"
                     className={s.control_link}
                   >
-                    <FacebookIcon className={s.icon_facebook} />
+                    <FaFacebookF className={s.icon_facebook} />
                   </a>
                 </li>
                 <li className={s.control_item}>
@@ -132,22 +141,28 @@ const Header = ({ isActive, setIsActive }) => {
           <div className={s.contact}>
             <p className={s.contact_title}>
               <span>Контакти</span>
-              <ArrowIcon className={s.icon_arrow} />
+              <IoIosArrowDown className={s.icon_arrow} />
             </p>
-            <div className={s.contact_list}>
-              <a href="tel:+380675211100" className={s.elem_link}>
-                <PhoneIcon className={s.icon_tel} />
-                <span>+38 (067) 521 11 00</span>
-              </a>
-              <a href="tel:+380675202508" className={s.elem_link}>
-                <PhoneIcon className={s.icon_tel} />
-                <span>+38 (067) 520 25 08</span>
-              </a>
-              <a href="mailto:y.otsabryk@gmail.com" className={s.elem_link}>
-                <MailIcon className={s.icon_mail} />
-                <span>y.otsabryk@gmail.com</span>
-              </a>
-            </div>
+            <ul className={s.contact_list}>
+              <li className={s.contact_item}>
+                <a href="tel:+380675211100" className={s.elem_link}>
+                  <FiPhoneCall className={s.icon_tel} />
+                  <span>+38 (067) 521 11 00</span>
+                </a>
+              </li>
+              <li className={s.contact_item}>
+                <a href="tel:+380675202508" className={s.elem_link}>
+                  <FiPhoneCall className={s.icon_tel} />
+                  <span>+38 (067) 520 25 08</span>
+                </a>
+              </li>
+              <li className={s.contact_item}>
+                <a href="mailto:y.otsabryk@gmail.com" className={s.elem_link}>
+                  <AiOutlineMail className={s.icon_mail} />
+                  <span>y.otsabryk@gmail.com</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
