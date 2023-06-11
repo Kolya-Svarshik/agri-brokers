@@ -49,7 +49,6 @@
     top: 0;
     right: 0;
     width: 100%;
-    height: auto;
     max-width: 340px;
     background-color: $whiteColor;
 
@@ -58,7 +57,7 @@
     box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
     border-bottom-left-radius: 25px;
 
-    overflow: hidden;
+    // overflow: auto;
 
     z-index: 80;
 
@@ -202,16 +201,6 @@
 
     text-align: center;
   }
-
-  // .button_menu {
-  //   width: 25px;
-  //   height: 25px;
-  //   padding: 50px 15px;
-
-  //   border: none;
-  //   background-color: $buttonTransColor;
-  //   order: 3;
-  // }
 
   .icon_menu {
     fill: $whiteColor;
@@ -394,7 +383,7 @@
 
 @media screen and (max-width: ($desktopWidth - 1px)) {
   .activeMobile {
-    transform: translateX(5%);
+    transform: translateX(0%);
   }
   .inActiveMobile {
     transform: translateX(400%);

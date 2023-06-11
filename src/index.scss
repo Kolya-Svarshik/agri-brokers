@@ -1,4 +1,4 @@
-@import-normalize;
+@import './style/normalize.scss';
 @import './style/variables.scss';
 
 body {
@@ -43,6 +43,10 @@ img {
 
 textarea {
   resize: none;
+}
+
+.no_scroll {
+  overflow: hidden;
 }
 
 .visually-hidden {

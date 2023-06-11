@@ -6,11 +6,11 @@ import s from './offers.module.scss';
 
 const Offers = () => {
   return (
-    <section className="container">
+    <section className="container" id="offers">
       <div className={s.section}>
         <h2 className={s.offers_tetle}>Ми пропонуємо</h2>
         <ul className={s.cart}>
-          <li className={s.cart_item}>
+          <li className={s.cart_item} id="offers_sale">
             <div className={s.cart_elem}>
               <h3 className={s.elem_title}>Для виробників с/г продукції</h3>
               <p className={s.elem_text}>
@@ -35,7 +35,7 @@ const Offers = () => {
             </div>
             <img src={photo} className={s.cart_photo}></img>
           </li>
-          <li className={s.cart_item}>
+          <li className={s.cart_item} id="offers_purchase">
             <div className={s.cart_elem}>
               <h3 className={s.elem_title}>Для переробників</h3>
               <p className={s.elem_text}>

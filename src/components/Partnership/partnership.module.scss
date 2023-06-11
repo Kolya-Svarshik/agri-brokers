@@ -41,10 +41,15 @@
   margin-bottom: 20px;
 }
 
-.elem_lisk {
+.elem_link {
+  border: 0;
+
   color: $liskGreenColor;
+  background-color: $buttonTransColor;
   text-decoration: underline;
   font-size: 16px;
+
+  cursor: pointer;
 }
 
 @media screen and (max-width: ($tabletWidth - 1px)) {

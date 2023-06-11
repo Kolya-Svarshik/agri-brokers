@@ -6,14 +6,16 @@ import Offers from './components/Offers/Offers';
 import Partnership from './components/Partnership/Partnership';
 import Quote from './components/Quote/Quote';
 import Map from './components/Map/Map';
-import Modal from './components/Modal/Modal';
 import ArrowScroll from './components/ArrowScroll/ArrowScroll';
 import Footer from './components/Footer/Footer';
+import Modal from './components/Modal/Modal';
 
 import { useState } from 'react';
+import { useIsActive } from './hooks/useIsActive';
 
-export default function App() {
+export const App = () => {
   const [isActive, setIsActive] = useState(false);
+  const { isActiveModal, onModal } = useIsActive();
 
   return (
     <div className={isActive && 'active'}>
@@ -22,12 +24,12 @@ export default function App() {
       <OurServices />
       <AboutUs />
       <Offers />
-      <Partnership />
+      <Partnership onModal={onModal} />
       <Quote />
       <Map />
-      {/* <Modal /> */}
       <ArrowScroll />
-      <Footer />
+      <Footer onModal={onModal} />
+      {isActiveModal && <Modal onModal={onModal} />}
     </div>
   );
-}
+};

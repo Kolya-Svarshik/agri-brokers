@@ -2,10 +2,10 @@ import photo from '../../img/IMG_1746.JPG';
 
 import s from './partnership.module.scss';
 
-const Partnership = () => {
+const Partnership = ({ onModal }) => {
   return (
     <div className={s.bg_color}>
-      <section className="container">
+      <section className="container" id="partnership">
         <div className={s.section}>
           <h2 className={s.partnership_tetle}>Партнерство</h2>
           <div className={s.cart}>
@@ -21,7 +21,14 @@ const Partnership = () => {
                   знання ринку допомагають з'єднувати виробників з потенційними
                   покупцями, забезпечуючи швидкі угоди та надійні контракти.
                 </p>
-                <a className={s.elem_lisk}>Отримати консультацію</a>
+                <button
+                  type="button"
+                  name="modal"
+                  onClick={onModal}
+                  className={s.elem_link}
+                >
+                  Отримати консультацію
+                </button>
               </div>
               <img src={photo} className={s.cart_photo}></img>
             </div>

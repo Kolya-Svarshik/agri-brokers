@@ -1,5 +1,7 @@
 import Copy from '../Copy/Copy';
 import { useState } from 'react';
+import { Link } from 'react-scroll';
+import { useIsActive } from '../../hooks/useIsActive';
 
 import logoImg from '../../img/IMG_8766.PNG';
 import { FaFacebookF } from 'react-icons/fa';
@@ -12,12 +14,7 @@ import { ReactComponent as HeadphoneIcon } from '../../img/headphone.svg';
 
 import s from './footer.module.scss';
 
-const Footer = () => {
-  // const [isActive, setIsActive] = useState(false);
-  // const open = () => {
-  //   setIsActive(!isActive);
-  // };
-
+const Footer = ({ onModal }) => {
   return (
     <footer className={s.footer}>
       <div className="container">
@@ -66,34 +63,63 @@ const Footer = () => {
             </div>
             <ul className={s.nav_list}>
               <li className={s.nav_item}>
-                <a href="#" className={s.nav_text}>
+                <Link
+                  to="about_us"
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className={s.nav_text}
+                >
                   <span>Про нас</span>
-                </a>
+                </Link>
               </li>
               <li className={s.nav_item}>
-                <a href="#" className={s.nav_text}>
+                <Link
+                  to="services"
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className={s.nav_text}
+                >
                   <span>Наші Послуги</span>
-                </a>
+                </Link>
               </li>
               <li className={s.nav_item}>
-                <a href="#" className={s.nav_text}>
+                <Link
+                  to="offers"
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className={s.nav_text}
+                >
                   <span>Гарячі пропозиції</span>
-                </a>
+                </Link>
               </li>
               <li className={s.nav_item}>
-                <a href="#" className={s.nav_text}>
+                <Link
+                  to="partnership"
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                  className={s.nav_text}
+                >
                   <span>Партнерство</span>
-                </a>
+                </Link>
               </li>
             </ul>
-            <a className={s.nav_button}>
+            <button
+              type="button"
+              name="modal"
+              onClick={onModal}
+              className={s.nav_button}
+            >
               <HeadphoneIcon
                 className={s.icon_headphone}
                 width={20}
                 height={20}
               />
               <span>Зворотній зв'язок</span>
-            </a>
+            </button>
           </nav>
           <div className={s.contact}>
             <div className={s.contact_container}>

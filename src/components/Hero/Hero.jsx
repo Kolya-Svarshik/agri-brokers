@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import bgVideo from '../../media/IMG_17321.mp4';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 
@@ -6,7 +8,7 @@ import s from './hero.module.scss';
 const Hero = () => {
   return (
     <div className={s.hero}>
-      <section className="container">
+      <section className="container" id="hero">
         <div className={s.section}>
           <h1 className={s.hero_title}>Agri Brokers Ukraine</h1>
           <p className={s.hero_text}>
@@ -14,12 +16,24 @@ const Hero = () => {
             господарства.
           </p>
           <div className={s.hero_nav}>
-            <a href="#" className={s.hero_button}>
+            <Link
+              to="about_us"
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className={s.hero_button}
+            >
               Про нас
-            </a>
-            <a href="#" className={s.hero_button}>
+            </Link>
+            <Link
+              to="partnership"
+              smooth={true}
+              offset={-100}
+              duration={500}
+              className={s.hero_button}
+            >
               Партнерство
-            </a>
+            </Link>
           </div>
           <ul className={s.link_social}>
             <li className={s.link_item}>

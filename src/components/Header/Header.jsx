@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 import logoImg from '../../img/IMG_8766.PNG';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaFacebookF } from 'react-icons/fa';
@@ -5,12 +7,12 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
 
+import { useIsActive } from '../../hooks/useIsActive';
+
 import s from './header.module.scss';
 
-const Header = ({ isActive, setIsActive }) => {
-  const handlerMenu = () => {
-    setIsActive(!isActive);
-  };
+const Header = () => {
+  const { onModal, isActiveModal } = useIsActive();
 
   return (
     <header className={s.header}>
@@ -25,13 +27,17 @@ const Header = ({ isActive, setIsActive }) => {
             ></img>
           </a>
 
-          <button type="button" onClick={handlerMenu} className={s.button_menu}>
+          <button
+            type="button"
+            name="menu"
+            onClick={onModal}
+            className={s.button_menu}
+          >
             <GiHamburgerMenu className={s.icon_menu} />
           </button>
-
           <nav
             className={
-              isActive
+              isActiveModal
                 ? `${s.nav} ${s.activeMobile}`
                 : `${s.nav} ${s.inActiveMobile}`
             }
@@ -40,55 +46,109 @@ const Header = ({ isActive, setIsActive }) => {
               <p className={s.nav_text}>Меню сайту</p>
               <ul className={s.nav_list}>
                 <li className={s.nav_item}>
-                  <a href="#" className={s.nav_title}>
+                  <Link
+                    to="about_us"
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    className={s.nav_title}
+                  >
                     <span>Про нас</span>
-                  </a>
+                  </Link>
                 </li>
                 <li className={`${s.nav_elem} ${s.nav_item}`}>
-                  <a href="#" className={s.nav_title}>
+                  <Link
+                    to="services"
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    className={s.nav_title}
+                  >
                     <span>Наші Послуги</span>
                     <IoIosArrowDown className={s.icon_arrow} />
-                  </a>
+                  </Link>
                   <ul className={s.elem_list}>
                     <li className={s.elem_item}>
-                      <a href="#" className={s.elem_link}>
+                      <Link
+                        to="services_manufacturers"
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className={s.elem_link}
+                      >
                         <span>Для виробників с/г продукції</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className={s.elem_item}>
-                      <a href="#" className={s.elem_link}>
+                      <Link
+                        to="services_processors"
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className={s.elem_link}
+                      >
                         <span>Для переробників</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className={s.elem_item}>
-                      <a href="#" className={s.elem_link}>
+                      <Link
+                        to="services_traders"
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className={s.elem_link}
+                      >
                         <span>Для трейдерів</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className={`${s.nav_elem} ${s.nav_item}`}>
-                  <a href="#" className={s.nav_title}>
+                  <Link
+                    to="offers"
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    className={s.nav_title}
+                  >
                     <span>Гарячі пропозиції</span>
                     <IoIosArrowDown className={s.icon_arrow} />
-                  </a>
+                  </Link>
                   <ul className={s.elem_list}>
                     <li className={s.elem_item}>
-                      <a href="#" className={s.elem_link}>
+                      <Link
+                        to="offers_sale"
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className={s.elem_link}
+                      >
                         <span>Гарячі пропозиції продаж</span>
-                      </a>
+                      </Link>
                     </li>
                     <li className={s.elem_item}>
-                      <a href="#" className={s.elem_link}>
+                      <Link
+                        to="offers_purchase"
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        className={s.elem_link}
+                      >
                         <span>Гарячі пропозиції купівля</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className={s.nav_item}>
-                  <a href="#" className={s.nav_title}>
+                  <Link
+                    to="partnership"
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    className={s.nav_title}
+                  >
                     <span>Партнерство</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -126,13 +186,15 @@ const Header = ({ isActive, setIsActive }) => {
                   </a>
                 </li>
                 <li className={s.control_item}>
-                  <botton
+                  <button
                     type="button"
-                    onClick={handlerMenu}
+                    name="menu"
+                    id="menu"
+                    onClick={e => onModal(e)}
                     className={s.button_exit}
                   >
                     Закрити
-                  </botton>
+                  </button>
                 </li>
               </ul>
             </div>
