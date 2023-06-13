@@ -8,6 +8,9 @@ const Copy = () => {
       <p className={s.copy_text}>
         &copy; <span>{currentYear}</span> Всі права захищені.
       </p>
+      {/* <p className={s.copy_text}>
+        created by <a href="https://github.com/Kolya-Svarshik">Nazar Buialo</a>
+      </p> */}
     </div>
   );
 };

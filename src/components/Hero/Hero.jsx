@@ -1,6 +1,6 @@
 import { Link } from 'react-scroll';
 
-import bgVideo from '../../media/IMG_17321.mp4';
+import bgVideo from '../../media/hero_video.mp4';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 
 import s from './hero.module.scss';

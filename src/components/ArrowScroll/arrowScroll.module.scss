@@ -10,6 +10,9 @@
   width: 40px;
   height: 40px;
 
+  // visibility: hidden;
+  // opacity: 0;
+
   border-radius: 50%;
   background-color: $buttonGreenColor;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -17,6 +20,11 @@
   cursor: pointer;
 
   z-index: 100;
+}
+
+.arrow_scroll_active {
+  // visibility: visible;
+  // opacity: 0.8;
 }
 
 .icon_arrow_scroll {

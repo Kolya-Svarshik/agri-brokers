@@ -33,12 +33,20 @@
   font-weight: 600;
 }
 
-.elem_text:not(:last-child) {
-  margin-bottom: 16px;
+.elem_text {
+  font-size: 18px;
+  text-align: justify;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &:last-child {
+    margin-bottom: 20px;
+  }
 }
 
-.elem_text:last-child {
-  margin-bottom: 20px;
+.elem_span {
+  margin-right: 5px;
 }
 
 .elem_link {
@@ -110,69 +118,3 @@
     padding: 70px 60px;
   }
 }
-
-// .section {
-//   padding-top: 100px;
-//   padding-bottom: 100px;
-// }
-
-// .partnership_tetle {
-//   position: relative;
-//   margin-bottom: 55px;
-
-//   font-size: 40px;
-//   font-weight: 600;
-
-//   &::before {
-//     position: absolute;
-//     content: '';
-//     width: 85px;
-//     height: 3px;
-//     left: 1px;
-//     bottom: -15px;
-//     background: $buttonGreenColor;
-//   }
-// }
-
-// .cart_item {
-//   display: flex;
-//   align-items: center;
-
-//   &:nth-child(odd) {
-//     flex-direction: row-reverse;
-
-//     .cart_photo {
-//       border-radius: 0 10px 10px 0;
-//     }
-//   }
-
-//   &:nth-child(even) {
-//     .cart_photo {
-//       border-radius: 10px 0 0 10px;
-//     }
-//   }
-// }
-
-// .cart_photo {
-//   height: 400px;
-// }
-
-// .cart_elem {
-//   padding: 70px 60px;
-// }
-
-// .elem_title {
-//   margin-bottom: 30px;
-//   font-size: 28px;
-//   font-weight: 600;
-// }
-
-// .elem_text:not(:last-child) {
-//   margin-bottom: 16px;
-// }
-
-// .elem_lisk {
-//   color: $liskGreenColor;
-//   text-decoration: underline;
-//   font-size: 16px;
-// }

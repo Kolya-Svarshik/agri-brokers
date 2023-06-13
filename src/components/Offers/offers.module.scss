@@ -29,12 +29,16 @@
   font-weight: 600;
 }
 
-.elem_text:not(:last-child) {
-  margin-bottom: 16px;
-}
+.elem_text {
+  font-size: 18px;
+  text-align: justify;
 
-.elem_text:last-child {
-  margin-bottom: 20px;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  &:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 .icon_button {

@@ -1,133 +1,69 @@
 import Copy from '../Copy/Copy';
-import { useState } from 'react';
-import { Link } from 'react-scroll';
-import { useIsActive } from '../../hooks/useIsActive';
 
-import logoImg from '../../img/IMG_8766.PNG';
-import { FaFacebookF } from 'react-icons/fa';
-import { FiPhoneCall } from 'react-icons/fi';
-import { AiOutlineMail } from 'react-icons/ai';
-import { MdLocationPin } from 'react-icons/md';
-import { IoIosArrowDown } from 'react-icons/io';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
-import { ReactComponent as HeadphoneIcon } from '../../img/headphone.svg';
+import logoImg from '../../img/logo.png';
+// import { FaFacebookF } from 'react-icons/fa';
+// import { FiPhoneCall } from 'react-icons/fi';
+// import { AiOutlineMail } from 'react-icons/ai';
+// import { MdLocationPin } from 'react-icons/md';
+// import { IoIosArrowDown } from 'react-icons/io';
+
+// import { useIsActive } from '../../hooks/useIsActive';
 
 import s from './footer.module.scss';
+// import { useState } from 'react';
+import { Social } from './DropDowns/Social';
+import { NavigationFooter } from './DropDowns/NavigationFooter';
+import { ContactFooter } from './DropDowns/ContactFooter';
 
-const Footer = ({ onModal }) => {
+const Footer = () => {
+  // const { onModal, isActiveModal, setIsActiveModal } = useIsActive();
+
   return (
     <footer className={s.footer}>
       <div className="container">
         <div className={s.section}>
           <div className={s.logo_bloc}>
             <div className={s.logo_sheave}>
-              <a href="#">
+              <Link onClick={() => scroll.scrollToTop()} to=".">
                 <img
                   src={logoImg}
                   width="200px"
                   alt="Logo"
                   className={s.logo}
                 ></img>
-              </a>
+              </Link>
               <p className={s.logo_text}>
-                Agri Brokers Ukraine - це брокерська компанія, яка
-                спеціалізується на допомозі фермерам у продажу зернових культур
-                за вигідними цінами. Маючи великий досвід та знання галузі, ми
-                надаємо цінні рекомендації та підтримку як фермерам, так і
-                трейдерам при купівлі-продажу різних зернових товарів.
+                Agri Brokers Ukraine – це надійний партнер, який розуміє
+                цінність бізнесу та допомагає отримати найкращі контракти з
+                купівлі-продажу продукції сільського господарства як в Україні,
+                так і за її межами.
               </p>
             </div>
-            <div className={s.social}>
-              <div className={s.social_container}>
-                <p className={s.social_tetle}>СЛІДКУЙТЕ ЗА НАМИ</p>
-                <IoIosArrowDown className={s.icon_arrow} />
-              </div>
-              <div className={s.social_bloc}>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100093057441973"
-                  target="_blank"
-                  className={s.social_text}
-                >
-                  <div className={s.icon_button}>
-                    <FaFacebookF className={s.icon_facebook} />
-                  </div>
-                  <p>Наш Facebook</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <nav className={s.nav}>
-            <div className={s.nav_container}>
-              <p className={s.nav_title}>МЕНЮ САЙТУ</p>
-              <IoIosArrowDown className={s.icon_arrow} />
-            </div>
-            <ul className={s.nav_list}>
-              <li className={s.nav_item}>
-                <Link
-                  to="about_us"
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  className={s.nav_text}
-                >
-                  <span>Про нас</span>
-                </Link>
-              </li>
-              <li className={s.nav_item}>
-                <Link
-                  to="services"
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  className={s.nav_text}
-                >
-                  <span>Наші Послуги</span>
-                </Link>
-              </li>
-              <li className={s.nav_item}>
-                <Link
-                  to="offers"
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  className={s.nav_text}
-                >
-                  <span>Гарячі пропозиції</span>
-                </Link>
-              </li>
-              <li className={s.nav_item}>
-                <Link
-                  to="partnership"
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  className={s.nav_text}
-                >
-                  <span>Партнерство</span>
-                </Link>
-              </li>
-            </ul>
-            <button
-              type="button"
-              name="modal"
-              onClick={onModal}
-              className={s.nav_button}
-            >
-              <HeadphoneIcon
-                className={s.icon_headphone}
-                width={20}
-                height={20}
-              />
-              <span>Зворотній зв'язок</span>
-            </button>
-          </nav>
-          <div className={s.contact}>
-            <div className={s.contact_container}>
-              <p className={s.contact_title}>Контакти</p>
-              <IoIosArrowDown className={s.icon_arrow} />
-            </div>
 
-            <ul className={s.contact_list}>
+            <Social />
+          </div>
+
+          <NavigationFooter />
+          {/* <div className={s.contact} id="contact">
+            <h2 onClick={onModal} id="contact" className={s.contact_title}>
+              Контакти
+            </h2>
+            <IoIosArrowDown
+              className={
+                !isActiveModal
+                  ? `${s.icon_arrow} ${s.icon_arrow_activev}`
+                  : `${s.icon_arrow}`
+              }
+            />
+            <ul
+              className={
+                !isActiveModal
+                  ? `${s.contact_list} ${s.activeMobile}`
+                  : `${s.contact_list} ${s.inActiveMobile}`
+              }
+            >
               <li className={s.contact_item}>
                 <p className={s.contact_text}>Телефони:</p>
                 <a href="tel:+380675211100" className={s.contact_link}>
@@ -161,7 +97,8 @@ const Footer = ({ onModal }) => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
+          <ContactFooter />
         </div>
         <Copy />
       </div>

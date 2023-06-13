@@ -1,4 +1,6 @@
-import photo from '../../img/IMG_1746.JPG';
+import peoplePhoto from '../../img/people.jpeg';
+import oilPhoto from '../../img/oil.jpeg';
+import grainPhoto from '../../img/grain.jpg';
 
 import s from './ourServices.module.scss';
 
@@ -27,7 +29,7 @@ const OurServices = () => {
                 CIF та інші.
               </p>
             </div>
-            <img src={photo} className={s.cart_photo}></img>
+            <img src={peoplePhoto} className={s.cart_photo}></img>
           </li>
           <li className={s.cart_item} id="services_processors">
             <div className={s.cart_elem}>
@@ -40,7 +42,7 @@ const OurServices = () => {
                 інших продуктів, забезпечуючи Вам оптимальні умови.
               </p>
             </div>
-            <img src={photo} className={s.cart_photo}></img>
+            <img src={oilPhoto} className={s.cart_photo}></img>
           </li>
           <li className={s.cart_item} id="services_traders">
             <div className={s.cart_elem}>
@@ -55,7 +57,7 @@ const OurServices = () => {
                 культур, а також продуктів їх переробки за оптимальними умовами.
               </p>
             </div>
-            <img src={photo} className={s.cart_photo}></img>
+            <img src={grainPhoto} className={s.cart_photo}></img>
           </li>
         </ul>
       </div>

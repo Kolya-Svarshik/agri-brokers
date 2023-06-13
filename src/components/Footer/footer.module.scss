@@ -5,15 +5,12 @@
 }
 
 .section {
-  // &:first-child {
-  //   border-bottom: 1px solid $borderFooterColor;
-  // }
   border-bottom: 1px solid $borderFooterColor;
 }
 
 .contact {
   &_title {
-    width: 100%;
+    // width: 100%;
 
     color: $whiteColor;
 
@@ -77,7 +74,7 @@
 
 .nav {
   &_title {
-    width: 100%;
+    // width: 100%;
 
     color: $whiteColor;
 
@@ -90,9 +87,7 @@
     cursor: pointer;
   }
 
-  &_list {
-    margin: 20px 15px;
-  }
+  
 
   &_item {
     &:not(:last-child) {
@@ -132,30 +127,6 @@
       }
     }
   }
-
-  &_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    color: $whiteColor;
-    background: $buttonTransColor;
-
-    border: 1px solid $whiteColor;
-    border-radius: 10px;
-    padding: 13px 20px;
-    font-weight: 400;
-    font-size: 16px;
-    height: unset;
-
-    transition: 0.5s;
-
-    &:hover,
-    &:focus {
-      background: $blackColor;
-      border: 1px solid $blackColor;
-    }
-  }
 }
 
 .logo {
@@ -173,7 +144,7 @@
   color: $whiteColor;
 
   &_tetle {
-    width: 100%;
+    // width: 100%;
 
     color: $whiteColor;
 
@@ -230,8 +201,6 @@
   margin-right: 10px;
   position: relative;
   top: 3px;
-
-  // fill: $whiteColor;
 }
 
 .icon_mail {
@@ -269,7 +238,7 @@
 @media screen and (max-width: ($tabletBigWidth - 1px)) {
   .section {
     display: grid;
-    padding: 45px 15px;
+    padding: 15px;
   }
 
   .logo {
@@ -283,64 +252,150 @@
   }
 
   .social {
-    &_container {
-      display: flex;
+    position: relative;
+
+    &_tetle {
       padding: 15px;
 
-      &:hover,
-      &:focus {
-        .icon_arrow {
-          transform: rotate(-90deg);
-        }
+      cursor: pointer;
+
+      z-index: 2;
+    }
+
+    &_bloc {
+      margin: 0 15px;
+      overflow: hidden;
+    }
+
+    .activeMobile {
+      animation: slideinSocial 0.5s ease-out forwards;
+    }
+
+    .inActiveMobile {
+      animation: slideinSocialClose 0.5s ease-out forwards;
+    }
+
+    @keyframes slideinSocial {
+      from {
+        height: 0px;
+      }
+      to {
+        height: 90px;
+      }
+    }
+    @keyframes slideinSocialClose {
+      from {
+        height: 90px;
+      }
+
+      to {
+        height: 0px;
       }
     }
   }
 
   .nav {
+    position: relative;
+
     border-bottom: 1px solid $borderFooterColor;
 
-    &_button {
-      display: none;
-    }
-
-    &_container {
-      display: flex;
+    &_title {
       padding: 15px;
 
-      &:hover,
-      &:focus {
-        .icon_arrow {
-          transform: rotate(-90deg);
-        }
+      cursor: pointer;
+    }
+
+    &_list {
+      margin: 0 15px;
+
+      overflow: hidden;
+    }
+
+    .activeMobile {
+      animation: slideinNav 0.5s ease-out forwards;
+    }
+
+    .inActiveMobile {
+      animation: slideinNavClose 0.5s ease-out forwards;
+    }
+
+    @keyframes slideinNav {
+      from {
+        height: 0px;
+      }
+      to {
+        height: 160px;
+      }
+    }
+    @keyframes slideinNavClose {
+      from {
+        height: 160px;
+      }
+
+      to {
+        height: 0px;
       }
     }
   }
 
   .contact {
+    position: relative;
+
     border-bottom: 1px solid $borderFooterColor;
 
     order: -1;
 
-    &_container {
-      display: flex;
+    &_title {
       padding: 15px;
 
-      &:hover,
-      &:focus {
-        .icon_arrow {
-          transform: rotate(-90deg);
-        }
+      cursor: pointer;
+
+      z-index: 2;
+    }
+
+    &_list {
+      overflow: hidden;
+    }
+
+    .activeMobile {
+      animation: slideinContact 0.5s ease-out forwards;
+    }
+
+    .inActiveMobile {
+      animation: slideinContactClose 0.5s ease-out forwards;
+    }
+
+    @keyframes slideinContact {
+      from {
+        height: 0px;
+      }
+      to {
+        height: 235px;
+      }
+    }
+    @keyframes slideinContactClose {
+      from {
+        height: 235px;
+      }
+
+      to {
+        height: 0px;
       }
     }
   }
 
   .icon_arrow {
+    position: absolute;
     display: block;
+    top: 15px;
+    right: 10px;
     width: 25px;
     height: 25px;
     margin-left: 8px;
 
     transition: 0.5s;
+
+    z-index: 1;
 
     path {
       fill: $whiteColor;
@@ -350,6 +405,10 @@
   .icon_button {
     height: 50px;
     width: 50px;
+  }
+
+  .icon_arrow_activev {
+    transform: rotate(-180deg);
   }
 }
 
@@ -365,6 +424,10 @@
       &_tetle {
         margin-bottom: 20px;
       }
+    }
+
+    &_bloc {
+      display: flex;
     }
   }
 
@@ -382,6 +445,10 @@
     &_butter {
       display: flex;
     }
+
+    &_list {
+      margin: 20px 15px;
+    }
   }
 
   .icon_arrow {
@@ -393,271 +460,3 @@
     width: 60px;
   }
 }
-
-// .section {
-//   display: flex;
-//   justify-content: space-between;
-
-//   padding-top: 90px;
-//   padding-bottom: 90px;
-// }
-
-// .logo {
-//   margin-bottom: 20px;
-
-//   &_text {
-//     width: 300px;
-//     margin-bottom: 20px;
-
-//     color: $whiteColor;
-//   }
-// }
-
-// .social {
-//   color: $whiteColor;
-
-//   &_tetle {
-//     margin-bottom: 20px;
-//   }
-
-//   &_bloc {
-//     display: flex;
-//     justify-content: space-between;
-//   }
-
-//   &_text {
-//     color: $whiteColor;
-//     transition: 0.5s;
-
-//     &:hover,
-//     &:focus {
-//       .icon_button {
-//         background: $blackColor;
-//       }
-
-//       path {
-//         fill: $whiteColor;
-//       }
-//     }
-//   }
-// }
-
-// .icon_button {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-bottom: 5px;
-
-//   height: 60px;
-//   width: 60px;
-//   border-radius: 100%;
-//   background: $whiteColor;
-//   transition: 0.5s;
-// }
-
-// .icon_facebook {
-//   width: 35px;
-//   height: 35px;
-//   fill: $blackColor;
-// }
-
-// .nav {
-//   &_title {
-//     margin-bottom: 20px;
-
-//     color: $whiteColor;
-
-//     font-weight: 600;
-//     font-size: 20px;
-//     text-transform: uppercase;
-//   }
-
-//   &_list {
-//     margin-bottom: 42px;
-//   }
-
-//   &_item {
-//     &:not(:last-child) {
-//       margin-bottom: 20px;
-//     }
-//   }
-
-//   &_text {
-//     color: $whiteColor;
-
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 19px;
-
-//     span {
-//       position: relative;
-//     }
-
-//     span::after {
-//       position: absolute;
-//       content: ' ';
-//       display: block;
-//       width: 0;
-//       height: 2px;
-
-//       bottom: -2px;
-
-//       background-color: $whiteColor;
-
-//       transition: 0.5s;
-//     }
-
-//     &:hover,
-//     &:focus {
-//       span::after {
-//         width: 100%;
-//       }
-//     }
-//   }
-
-//   &_button {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 180px;
-//     height: 40px;
-//     color: $whiteColor;
-//     background: $buttonTransColor;
-
-//     border: 1px solid $whiteColor;
-//     border-radius: 10px;
-//     padding: 13px 20px;
-//     font-weight: 400;
-//     font-size: 16px;
-//     height: unset;
-
-//     transition: 0.5s;
-
-//     &:hover,
-//     &:focus {
-//       background: $blackColor;
-//       border: 1px solid $blackColor;
-//     }
-//   }
-// }
-
-// .icon_headphone {
-//   margin-right: 5px;
-
-//   fill: $whiteColor;
-// }
-
-// .contact {
-//   &_title {
-//     margin-bottom: 20px;
-
-//     color: $whiteColor;
-
-//     font-weight: 600;
-//     font-size: 20px;
-//     text-transform: uppercase;
-//   }
-
-//   &_list {
-//     width: 300px;
-//   }
-
-//   &_item {
-//     &:not(:last-child) {
-//       margin-bottom: 20px;
-//     }
-//   }
-
-//   &_text {
-//     margin-left: 20px;
-
-//     color: $textFooterColor;
-
-//     line-height: 1.8;
-//   }
-
-//   &_link {
-//     display: flex;
-//     margin-bottom: 5px;
-
-//     color: $whiteColor;
-
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 19px;
-
-//     span {
-//       position: relative;
-//     }
-
-//     span::after {
-//       position: absolute;
-//       content: ' ';
-//       display: block;
-//       width: 0;
-//       height: 2px;
-
-//       bottom: -2px;
-
-//       background-color: $whiteColor;
-
-//       transition: 0.5s;
-//     }
-
-//     &:hover,
-//     &:focus {
-//       span::after {
-//         width: 100%;
-//       }
-//     }
-//   }
-// }
-
-// .icon_tel {
-//   width: 14px;
-//   height: 14px;
-//   margin-right: 10px;
-//   position: relative;
-//   top: 3px;
-
-//   fill: $whiteColor;
-// }
-
-// .icon_mail {
-//   width: 14px;
-//   height: 14px;
-//   margin-right: 10px;
-//   position: relative;
-//   top: 3px;
-
-//   fill: $whiteColor;
-// }
-
-// .icon_geo {
-//   width: 14px;
-//   height: 14px;
-//   margin-right: 10px;
-//   position: relative;
-//   top: 3px;
-
-//   fill: $whiteColor;
-// }
-
-// .copy {
-//   margin-left: auto;
-//   margin-right: auto;
-//   padding-top: 20px;
-//   padding-bottom: 20px;
-//   padding-left: 15px;
-//   padding-right: 15px;
-
-//   width: $desktopWidth - 1;
-
-//   border-top: 1px solid $borderFooterColor;
-
-//   &_text {
-//     color: $whiteColor;
-//   }
-// }

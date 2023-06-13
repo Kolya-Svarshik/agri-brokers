@@ -1,4 +1,6 @@
-import photo from '../../img/IMG_1746.JPG';
+import { Link, animateScroll as scroll } from 'react-scroll';
+
+import photo from '../../img/people1.jpg';
 
 import s from './partnership.module.scss';
 
@@ -7,30 +9,40 @@ const Partnership = ({ onModal }) => {
     <div className={s.bg_color}>
       <section className="container" id="partnership">
         <div className={s.section}>
-          <h2 className={s.partnership_tetle}>Партнерство</h2>
+          <h2 className={s.partnership_tetle}>Партнерам</h2>
           <div className={s.cart}>
             <div className={s.cart_item}>
               <div className={s.cart_elem}>
-                <h3 className={s.elem_title}>Для виробників с/г продукції</h3>
                 <p className={s.elem_text}>
-                  Agri Brokers Ukraine - це компанія, що спеціалізується на
-                  продажу зернових культур за вигідними цінами та наданні цінних
-                  рекомендацій фермерам та трейдерам. Ми пропонуємо комплексні
-                  послуги, починаючи від пошуку якісної продукції до укладання
-                  контрактів на купівлю-продаж зерна. Наша ефективна мережа та
-                  знання ринку допомагають з'єднувати виробників з потенційними
-                  покупцями, забезпечуючи швидкі угоди та надійні контракти.
+                  Agri Brokers Ukraine відкрита для партнерства для всіх
+                  компаній як з України, так і з-за кордону, які зацікавлені в
+                  гарних угодах з купівлі продажу продукції
+                  сільського-господарства. Співпраця з нами допомагає вам
+                  досягати успіху, розширюючи ваші можливості в торгівлі
+                  агропродукцією, включаючи угоди з країнами ЄС та іншими
+                  регіонами земної кулі.
                 </p>
-                <button
-                  type="button"
-                  name="modal"
-                  onClick={onModal}
+                <p className={s.elem_text}>
+                  Agri Brokers Ukraine допоможе фермерам, трейдерам,
+                  переробникам, брокерським та іншим компаніям досягнути своїх
+                  цілей на внутрішньому та міжнародному ринках.
+                </p>
+
+                <span className={s.elem_span}>
+                  Щодо партнерства пишіть на пошту, в месенджери або телефонуйте
+                  -
+                </span>
+                <Link
+                  to="contact"
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
                   className={s.elem_link}
                 >
-                  Отримати консультацію
-                </button>
+                  Контакти
+                </Link>
               </div>
-              <img src={photo} className={s.cart_photo}></img>
+              <img src={photo} className={s.cart_photo} alt="" />
             </div>
           </div>
         </div>

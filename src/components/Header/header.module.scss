@@ -222,16 +222,9 @@
     display: block;
     position: relative;
 
-    &:hover,
-    &:focus {
-      .contact_list {
-        display: block;
-        opacity: 1;
-      }
 
-      .icon_arrow {
-        transform: rotate(-180deg);
-      }
+    .icon_arrow_activev {
+      transform: rotate(-180deg);
     }
 
     &_title {
@@ -239,8 +232,12 @@
       align-items: center;
       padding: 50px 15px;
 
-      font-size: 20px;
+      border: 0;
+      border-color: $buttonTransColor;
+      background-color: $buttonTransColor;
       color: $whiteColor;
+
+      font-size: 20px;
 
       cursor: pointer;
 
@@ -273,15 +270,13 @@
     &_list {
       position: absolute;
       content: '';
-      display: none;
+      display: block;
       top: 100px;
       left: -43px;
 
       background-color: $whiteColor;
       padding: 20px;
       border-radius: 10px;
-
-      opacity: 0;
 
       z-index: 20;
     }
@@ -384,9 +379,23 @@
 @media screen and (max-width: ($desktopWidth - 1px)) {
   .activeMobile {
     transform: translateX(0%);
+    transition: all 500ms linear;
   }
   .inActiveMobile {
-    transform: translateX(400%);
+    transform: translateX(130%);
+
+    transition: all 500ms linear;
+  }
+  .backdrop_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $buttonTransColor;
+
+    z-index: 1;
   }
 }
 
@@ -467,177 +476,3 @@
     display: none;
   }
 }
-
-//  .elem_list {
-//   position: absolute;
-//   content: '';
-//   top: 100px;
-//   left: -22px;
-
-//   display: none;
-//   opacity: 0;
-//   background-color: $whiteColor;
-//   padding: 20px;
-//   border-radius: 10px;
-
-//   z-index: 20;
-// }
-
-// .nav {
-//   &_title {
-//     display: block;
-
-//     font-size: 20px;
-
-//     cursor: pointer;
-
-//     span {
-//       position: relative;
-//     }
-
-//     span::after {
-//       position: absolute;
-//       content: ' ';
-//       display: block;
-//       width: 0;
-//       height: 2px;
-
-//       bottom: -2px;
-
-//       background-color: $whiteColor;
-
-//       transition: 0.5s;
-//     }
-
-//     &:hover,
-//     &:focus {
-//       span::after {
-//         width: 100%;
-//       }
-
-//       .elem_list {
-//         display: block;
-//         opacity: 1;
-//       }
-//     }
-//   }
-
-//   &_link {
-//     font-size: 16px;
-//     color: $whiteColor;
-//   }
-
-//   &_elem {
-//     position: relative;
-
-//     &:hover,
-//     &:focus {
-//       .elem_list {
-//         display: block;
-//         opacity: 1;
-//       }
-
-//       .icon_arrow {
-//         transform: rotate(-180deg);
-//       }
-//     }
-//   }
-// }
-
-// .elem_list {
-//   position: absolute;
-//   content: '';
-//   top: 100px;
-//   left: -22px;
-
-//   display: none;
-//   opacity: 0;
-//   background-color: $whiteColor;
-//   padding: 20px;
-//   border-radius: 10px;
-
-//   z-index: 20;
-// }
-
-// .elem_link {
-//   display: flex;
-
-//   color: $textColor;
-
-//   font-size: 16px;
-//   white-space: nowrap;
-
-//   span {
-//     position: relative;
-//   }
-
-//   span::after {
-//     position: absolute;
-//     content: ' ';
-//     display: block;
-//     width: 0;
-//     height: 2px;
-
-//     bottom: -2px;
-
-//     background-color: $blackColor;
-
-//     transition: 0.5s;
-//   }
-
-//   span::after {
-//     position: absolute;
-//     content: ' ';
-//     display: block;
-//     width: 0;
-//     height: 2px;
-
-//     bottom: -2px;
-
-//     background-color: $blackColor;
-
-//     transition: 0.5s;
-//   }
-
-//   &:hover,
-//   &:focus {
-//     span::after {
-//       width: 100%;
-//     }
-//   }
-// }
-
-// .icon_tel {
-//   width: 16px;
-//   height: 16px;
-//   margin-right: 10px;
-
-//   line-height: 1;
-//   position: relative;
-//   top: 3px;
-
-//   path {
-//     fill: $blackColor;
-//   }
-// }
-
-// .icon_mail {
-//   width: 16px;
-//   height: 16px;
-//   margin-right: 10px;
-
-//   line-height: 1;
-//   position: relative;
-//   top: 3px;
-
-//   g {
-//     stroke: $blackColor;
-//   }
-// }
-
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
-//------------------------------------------------------------------------------
