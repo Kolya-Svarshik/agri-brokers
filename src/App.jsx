@@ -10,9 +10,12 @@ import ArrowScroll from './components/ArrowScroll/ArrowScroll';
 import Footer from './components/Footer/Footer';
 
 import { useState } from 'react';
+import { useTargetScroll } from './hooks/useTargetScroll';
 
 export const App = () => {
   const [isActive, setIsActive] = useState(false);
+
+
 
   return (
     // <div className={isActive && 'active'}>

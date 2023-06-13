@@ -72,7 +72,7 @@ const Header = () => {
                       smooth={true}
                       offset={-100}
                       duration={500}
-                      name="menu"
+                      name="item_menu"
                       onClick={onModal}
                       className={s.nav_title}
                     >
@@ -85,7 +85,7 @@ const Header = () => {
                       smooth={true}
                       offset={-100}
                       duration={500}
-                      name="menu"
+                      name="item_menu"
                       onClick={onModal}
                       className={s.nav_title}
                     >
@@ -134,7 +134,7 @@ const Header = () => {
                       smooth={true}
                       offset={-100}
                       duration={500}
-                      name="menu"
+                      name="item_menu"
                       onClick={onModal}
                       className={s.nav_title}
                     >
@@ -172,7 +172,7 @@ const Header = () => {
                       smooth={true}
                       offset={-100}
                       duration={500}
-                      name="menu"
+                      name="item_menu"
                       onClick={onModal}
                       className={s.nav_title}
                     >
