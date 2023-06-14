@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 import { IoIosArrowDown } from 'react-icons/io';
 
@@ -9,7 +9,7 @@ import { useIsActive } from '../../../hooks/useIsActive';
 import s from '../footer.module.scss';
 
 export const NavigationFooter = () => {
-  const { onModal, isActiveModal, setIsActiveModal } = useIsActive();
+  const { onModal, isActiveModal } = useIsActive();
 
   return (
     <nav className={s.nav}>
@@ -60,7 +60,7 @@ export const NavigationFooter = () => {
             duration={500}
             className={s.nav_text}
           >
-            <span>Гарячі пропозиції</span>
+            <span>Пропозиції сьогодні</span>
           </Link>
         </li>
         <li className={s.nav_item}>

@@ -1,6 +1,8 @@
 @import '../../style/variables.scss';
 
 .copy {
+  display: flex;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
@@ -11,4 +13,10 @@
   &_text {
     color: $whiteColor;
   }
+}
+
+.created_text {
+  color: $quoteColor;
+
+  font-size: 14px;
 }

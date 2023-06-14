@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 
 import bgVideo from '../../media/hero_video.mp4';
+
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
 
 import s from './hero.module.scss';
@@ -40,6 +41,7 @@ const Hero = () => {
               <a
                 href="https://www.facebook.com/profile.php?id=100093057441973"
                 target="_blank"
+                rel="noreferrer"
                 className={s.social_text}
               >
                 <div className={s.icon_button}>
@@ -52,6 +54,7 @@ const Hero = () => {
               <a
                 href="https://t.me/agrosales_sale_grain"
                 target="_blank"
+                rel="noreferrer"
                 className={s.social_text}
               >
                 <div className={s.icon_button}>
@@ -64,6 +67,7 @@ const Hero = () => {
               <a
                 href="https://t.me/I_buy_grain"
                 target="_blank"
+                rel="noreferrer"
                 className={s.social_text}
               >
                 <div className={s.icon_button}>

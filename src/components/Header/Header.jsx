@@ -2,7 +2,9 @@ import OutsideClickHandler from '../../hooks/OutsideClickHandler';
 
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-import logoImg from '../../img/logo.png';
+import logoImgPng from '../../img/logo.png';
+import logoImgWebp from '../../img/logo.webp';
+
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaFacebookF } from 'react-icons/fa';
 import { FiPhoneCall } from 'react-icons/fi';
@@ -13,9 +15,10 @@ import { useIsActive } from '../../hooks/useIsActive';
 
 import s from './header.module.scss';
 import { useState } from 'react';
+import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
 
 const Header = () => {
-  const { onModal, isActiveModal, setIsActiveModal } = useIsActive();
+  const { onModal, isActiveModal } = useIsActive();
 
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
@@ -31,12 +34,7 @@ const Header = () => {
       <div className="container">
         <div className={s.section}>
           <Link onClick={() => scroll.scrollToTop()} to=".">
-            <img
-              src={logoImg}
-              className={s.logo}
-              width="200px"
-              alt="Logo"
-            ></img>
+            <CustomImagePicture classNamePhoto={s.logo} webp={logoImgWebp} photo={logoImgPng} altPhoto='Логотип Agri Brokers Ukraine' width="200px" />
           </Link>
 
           <button
@@ -138,21 +136,10 @@ const Header = () => {
                       onClick={onModal}
                       className={s.nav_title}
                     >
-                      <span>Гарячі пропозиції</span>
+                      <span>Пропозиції сьогодні</span>
                       <IoIosArrowDown className={s.icon_arrow} />
                     </Link>
-                    <ul className={s.elem_list}>
-                      <li className={s.elem_item}>
-                        <Link
-                          to="offers_sale"
-                          smooth={true}
-                          offset={-100}
-                          duration={500}
-                          className={s.elem_link}
-                        >
-                          <span>Гарячі пропозиції продаж</span>
-                        </Link>
-                      </li>
+                    <ul className={`${s.elem_list} ${s.elem_list_two}`}>
                       <li className={s.elem_item}>
                         <Link
                           to="offers_purchase"
@@ -161,9 +148,21 @@ const Header = () => {
                           duration={500}
                           className={s.elem_link}
                         >
-                          <span>Гарячі пропозиції купівля</span>
+                          <span>Купуємо сьогодні</span>
                         </Link>
                       </li>
+                      <li className={s.elem_item}>
+                        <Link
+                          to="offers_sale"
+                          smooth={true}
+                          offset={-100}
+                          duration={500}
+                          className={s.elem_link}
+                        >
+                          <span>Сьогодні в продажу</span>
+                        </Link>
+                      </li>
+
                     </ul>
                   </li>
                   <li className={s.nav_item}>
@@ -195,10 +194,10 @@ const Header = () => {
                   </li>
                   <li className={s.hookup_item}>
                     <a
-                      href="mailto:y.otsabryk@gmail.com"
+                      href="mailto:agribrokersukraine@gmail.com"
                       className={s.hookup_link}
                     >
-                      <span>y.otsabryk@gmail.com</span>
+                      <span>agribrokersukraine@gmail.com</span>
                     </a>
                   </li>
                 </ul>
@@ -229,6 +228,7 @@ const Header = () => {
               </div>
             </nav>
           </div>
+          {/* <input type="checkbox" className="toggle toggle-success" checked /> */}
           <OutsideClickHandler onOutsideClick={handleClose}>
             <div className={s.contact}>
               <button

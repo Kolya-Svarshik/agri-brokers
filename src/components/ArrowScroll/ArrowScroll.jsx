@@ -1,9 +1,10 @@
 import { animateScroll as scroll } from 'react-scroll';
 import { IoIosArrowUp } from 'react-icons/io';
 
-import s from './arrowScroll.module.scss';
 import { useTargetScroll } from '../../hooks/useTargetScroll';
 import { useEffect, useState } from 'react';
+
+import s from './arrowScroll.module.scss';
 
 const ArrowScroll = () => {
   const [vp, setVp] = useState(false);

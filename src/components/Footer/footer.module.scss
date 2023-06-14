@@ -45,6 +45,10 @@
     font-size: 16px;
     line-height: 19px;
 
+    &_underline {
+      text-decoration: underline;
+    }
+
     span {
       position: relative;
     }
@@ -86,8 +90,6 @@
 
     cursor: pointer;
   }
-
-  
 
   &_item {
     &:not(:last-child) {

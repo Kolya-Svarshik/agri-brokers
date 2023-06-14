@@ -1,9 +1,5 @@
 @import '../../style/variables.scss';
 
-.bg_color {
-  background-color: $bgColor;
-}
-
 .section {
   padding: 45px 30px;
 }
@@ -111,7 +107,7 @@
   }
 
   .cart_photo {
-    width: 400px;
+    max-width: 400px;
   }
 
   .cart_elem {

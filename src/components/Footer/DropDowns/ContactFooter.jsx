@@ -8,7 +8,7 @@ import { useIsActive } from '../../../hooks/useIsActive';
 import s from '../footer.module.scss';
 
 export const ContactFooter = () => {
-  const { onModal, isActiveModal, setIsActiveModal } = useIsActive();
+  const { onModal, isActiveModal } = useIsActive();
 
   return (
     <div className={s.contact} id="contact">
@@ -42,9 +42,9 @@ export const ContactFooter = () => {
         </li>
         <li className={s.contact_item}>
           <p className={s.contact_text}>Електронна скринька:</p>
-          <a href="mailto:y.otsabryk@gmail.com" className={s.contact_link}>
+          <a href="mailto:agribrokersukraine@gmail.com" className={s.contact_link}>
             <AiOutlineMail className={s.icon_mail} />
-            <span>y.otsabryk@gmail.com</span>
+            <span>agribrokersukraine@gmail.com</span>
           </a>
         </li>
         <li className={s.contact_item}>
@@ -52,7 +52,7 @@ export const ContactFooter = () => {
           <a
             href="https://goo.gl/maps/DXx6PMhRGwQzJaxa6"
             target="_blank"
-            className={s.contact_link}
+            className={`${s.contact_link} ${s.contact_link_underline}`}
             rel="noreferrer"
           >
             <MdLocationPin className={s.icon_geo} />

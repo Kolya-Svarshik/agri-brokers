@@ -1,5 +1,9 @@
 @import '../../style/variables.scss';
 
+.bg_color {
+  background-color: $bgColor;
+}
+
 .section {
   padding: 45px 30px;
 }
@@ -58,7 +62,9 @@
   display: flex;
   align-items: center;
 
-  color: $textColor;
+  color: $liskGreenColor;
+  text-decoration: underline;
+
   transition: 0.5s;
 
   &:hover,
@@ -131,109 +137,10 @@
   }
 
   .cart_photo {
-    width: 400px;
+    max-width: 400px;
   }
 
   .cart_elem {
     padding: 70px 60px;
   }
 }
-
-// .section {
-//   padding-top: 100px;
-//   padding-bottom: 100px;
-// }
-
-// .offers_tetle {
-//   position: relative;
-//   margin-bottom: 55px;
-
-//   font-size: 40px;
-//   font-weight: 600;
-
-//   &::before {
-//     position: absolute;
-//     content: '';
-//     width: 85px;
-//     height: 3px;
-//     left: 1px;
-//     bottom: -15px;
-//     background: $buttonGreenColor;
-//   }
-// }
-
-// .cart_item {
-//   display: flex;
-//   align-items: center;
-
-//   &:nth-child(odd) {
-//     flex-direction: row-reverse;
-
-//     .cart_photo {
-//       border-radius: 0 10px 10px 0;
-//     }
-//   }
-
-//   &:nth-child(even) {
-//     .cart_photo {
-//       border-radius: 10px 0 0 10px;
-//     }
-//   }
-// }
-
-// .cart_photo {
-//   height: 400px;
-// }
-
-// .cart_elem {
-//   padding: 70px 60px;
-// }
-
-// .elem_title {
-//   margin-bottom: 30px;
-//   font-size: 28px;
-//   font-weight: 600;
-// }
-
-// .elem_text:not(:last-child) {
-//   margin-bottom: 16px;
-// }
-
-// .icon_button {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin-right: 5px;
-
-//   height: 60px;
-//   width: 60px;
-//   border-radius: 100%;
-//   background: $linkSocialColor;
-//   transition: 0.5s;
-// }
-
-// .social_text {
-//   display: flex;
-//   align-items: center;
-
-//   color: $textColor;
-//   transition: 0.5s;
-
-//   &:hover,
-//   &:focus {
-//     .social_text {
-//       color: $blackColor;
-//     }
-
-//     .icon_button {
-//       background: $whiteColor;
-//       outline: 2px solid $blackColor;
-//     }
-//   }
-// }
-
-// .icon_telegram {
-//   width: 35px;
-//   height: 35px;
-//   fill: $blackColor;
-// }

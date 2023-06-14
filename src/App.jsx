@@ -1,9 +1,9 @@
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import OurServices from './components/OurServices/OurServices';
-import AboutUs from './components/AboutUs/AboutUs';
 import Offers from './components/Offers/Offers';
 import Partnership from './components/Partnership/Partnership';
+import AboutUs from './components/AboutUs/AboutUs';
 import Quote from './components/Quote/Quote';
 import Map from './components/Map/Map';
 import ArrowScroll from './components/ArrowScroll/ArrowScroll';
@@ -23,9 +23,9 @@ export const App = () => {
       <Header isActive={isActive} setIsActive={setIsActive} />
       <Hero />
       <OurServices />
-      <AboutUs />
       <Offers />
       <Partnership />
+      <AboutUs />
       <Quote />
       <Map />
       <ArrowScroll />

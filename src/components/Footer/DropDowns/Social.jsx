@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from '../../../img/logo.png';
+
 import { FaFacebookF } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
 import { useIsActive } from '../../../hooks/useIsActive';
@@ -7,7 +7,7 @@ import { useIsActive } from '../../../hooks/useIsActive';
 import s from '../footer.module.scss';
 
 export const Social = () => {
-  const { onModal, isActiveModal, setIsActiveModal } = useIsActive();
+  const { onModal, isActiveModal } = useIsActive();
 
   return (
     <div className={s.social}>
@@ -32,6 +32,7 @@ export const Social = () => {
           <a
             href="https://www.facebook.com/profile.php?id=100093057441973"
             target="_blank"
+            rel="noreferrer"
             className={s.social_text}
           >
             <div className={s.icon_button}>
