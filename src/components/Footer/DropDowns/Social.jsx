@@ -3,16 +3,17 @@ import React from 'react';
 import { FaFacebookF } from 'react-icons/fa';
 import { IoIosArrowDown } from 'react-icons/io';
 import { useIsActive } from '../../../hooks/useIsActive';
+import { useTranslation } from 'react-i18next';
 
 import s from '../footer.module.scss';
 
 export const Social = () => {
   const { onModal, isActiveModal } = useIsActive();
-
+  const { t } = useTranslation()
   return (
     <div className={s.social}>
       <h2 onClick={onModal} id="dropDownsFooter" className={s.social_tetle}>
-        СЛІДКУЙТЕ ЗА НАМИ
+        {t('footer.social.title')}
       </h2>
       <IoIosArrowDown
         className={
@@ -38,7 +39,7 @@ export const Social = () => {
             <div className={s.icon_button}>
               <FaFacebookF className={s.icon_facebook} />
             </div>
-            <p>Наш Facebook</p>
+            <p>{t('footer.social.link.facebook')}</p>
           </a>
         </li>
       </ul>

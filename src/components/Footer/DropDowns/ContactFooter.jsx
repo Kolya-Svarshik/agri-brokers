@@ -4,16 +4,17 @@ import { MdLocationPin } from 'react-icons/md';
 import { IoIosArrowDown } from 'react-icons/io';
 
 import { useIsActive } from '../../../hooks/useIsActive';
+import { useTranslation } from 'react-i18next';
 
 import s from '../footer.module.scss';
 
 export const ContactFooter = () => {
   const { onModal, isActiveModal } = useIsActive();
-
+  const { t } = useTranslation()
   return (
     <div className={s.contact} id="contact">
       <h2 onClick={onModal} id="dropDownsFooter" className={s.contact_title}>
-        Контакти
+        {t('footer.contact.title')}
       </h2>
       <IoIosArrowDown
         className={
@@ -30,7 +31,7 @@ export const ContactFooter = () => {
         }
       >
         <li className={s.contact_item}>
-          <p className={s.contact_text}>Телефони:</p>
+          <p className={s.contact_text}>{t('footer.contact.info.tel')}</p>
           <a href="tel:+380675211100" className={s.contact_link}>
             <FiPhoneCall className={s.icon_tel} />
             <span>+38 (067) 521 11 00</span>
@@ -41,14 +42,14 @@ export const ContactFooter = () => {
           </a>
         </li>
         <li className={s.contact_item}>
-          <p className={s.contact_text}>Електронна скринька:</p>
+          <p className={s.contact_text}>{t('footer.contact.info.email')}</p>
           <a href="mailto:agribrokersukraine@gmail.com" className={s.contact_link}>
             <AiOutlineMail className={s.icon_mail} />
             <span>agribrokersukraine@gmail.com</span>
           </a>
         </li>
         <li className={s.contact_item}>
-          <p className={s.contact_text}>Адреса офісу:</p>
+          <p className={s.contact_text}>{t('footer.contact.info.geo.title')}</p>
           <a
             href="https://goo.gl/maps/DXx6PMhRGwQzJaxa6"
             target="_blank"
@@ -56,7 +57,7 @@ export const ContactFooter = () => {
             rel="noreferrer"
           >
             <MdLocationPin className={s.icon_geo} />
-            <span>вулиця Академіка Вільямса, 2б</span>
+            <span>{t('footer.contact.info.geo.text')}</span>
           </a>
         </li>
       </ul>

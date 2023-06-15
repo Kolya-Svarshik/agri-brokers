@@ -16,6 +16,44 @@
   align-items: center;
 }
 
+.language {
+  &_item {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $borderFooterColor;
+    }
+  }
+
+  &_button {
+    width: 50px;
+    height: 30px;
+
+    border: 0;
+
+    color: $whiteColor;
+    background-color: $buttonTransColor;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+  }
+}
+
+.activebutton {
+  color: $whiteColor;
+  // scale: 1.1;
+  font-size: 17px;
+}
+
+.inActivebutton {
+  color: $textFooterColor;
+  // scale: 0.9;
+  font-size: 14px;
+}
+
 .button_menu {
   border: none;
   background-color: $buttonTransColor;
@@ -220,8 +258,8 @@
 
 @media screen and (min-width: $tabletBigWidth) {
   .contact {
-    display: block;
     position: relative;
+    display: block;
 
     .icon_arrow_activev {
       transform: rotate(-180deg);
@@ -317,7 +355,7 @@
     z-index: 20;
 
     &_two {
-      left: 23px;
+      left: 12px;
     }
   }
 
@@ -385,6 +423,14 @@
 }
 
 @media screen and (max-width: ($desktopWidth - 1px)) {
+  // .contact {
+  //   position: relative;
+
+  //   &_list {
+  //     left: -43px;
+  //   }
+  // }
+
   .activeMobile {
     transform: translateX(0%);
     transition: all 500ms linear;
@@ -484,6 +530,25 @@
     display: none;
   }
 }
+
+// @media screen and (min-width: $desktopWidth) and (max-width: 1321px) {
+//   .contact {
+//     &_list {
+//       // right: 0;
+//       left: -43px;
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 1321px) {
+//   .contact {
+//     position: relative;
+
+//     &_list {
+//       left: -43px;
+//     }
+//   }
+// }
 
 @media screen and (max-height: 434px) {
   .nav {

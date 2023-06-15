@@ -9,17 +9,24 @@ import Map from './components/Map/Map';
 import ArrowScroll from './components/ArrowScroll/ArrowScroll';
 import Footer from './components/Footer/Footer';
 
+import { Suspense } from 'react';
+
 import { useState } from 'react';
-import { useTargetScroll } from './hooks/useTargetScroll';
+// import { useTranslation } from 'react-i18next';
+
+// const locales = {
+//   en: { title: 'English' },
+//   uk: { title: 'Ukraine' }
+// }
 
 export const App = () => {
   const [isActive, setIsActive] = useState(false);
 
+  // const { t, i18n } = useTranslation()
 
 
   return (
-    // <div className={isActive && 'active'}>
-    <>
+    <Suspense fallback='...loading'>
       <Header isActive={isActive} setIsActive={setIsActive} />
       <Hero />
       <OurServices />
@@ -30,7 +37,6 @@ export const App = () => {
       <Map />
       <ArrowScroll />
       <Footer />
-    </>
-    // </div>
+    </Suspense>
   );
 };

@@ -1,16 +1,15 @@
 import s from './quote.module.scss';
 
+import { useTranslation } from 'react-i18next';
+
 const Quote = () => {
+  const { t } = useTranslation()
   return (
     <section className="container">
       <div className={s.section}>
         <div className={s.quote}>
           <span>
-            Співпраця з Agri Brokers Ukraine принесе Вам успіх та позитивні
-            емоції. Ми забезпечимо вигідні угоди, ефективне виконання замовлень
-            та професійний підхід до кожного партнера. Обирайте Agri Brokers
-            Ukraine для укладання вигідних контрактів та розширення можливостей
-            Вашого бізнесу.
+            {t('main.quote.text')}
           </span>
         </div>
       </div>

@@ -1,6 +1,6 @@
 {
   "name": "agri-brokers",
-  "version": "0.1.5",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -10,10 +10,14 @@
     "framer-motion": "^10.12.16",
     "gh-pages": "^5.0.0",
     "i18next": "^22.5.1",
+    "i18next-browser-languagedetector": "^7.0.2",
+    "i18next-http-backend": "^2.2.1",
+    "i18next-react-postprocessor": "^3.1.0",
     "modern-normalize": "^1.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.3.1",
     "react-icons": "^4.9.0",
     "react-lazy-load-image-component": "^1.6.0",
     "react-player": "^2.12.0",
@@ -51,6 +55,7 @@
   },
   "devDependencies": {
     "daisyui": "^3.1.0",
+    "i18next-parser": "^8.0.0",
     "postcss-normalize": "^10.0.1",
     "prettier": "2.8.4"
   },

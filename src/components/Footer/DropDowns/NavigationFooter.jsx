@@ -5,16 +5,17 @@ import { Link } from 'react-scroll';
 import { IoIosArrowDown } from 'react-icons/io';
 
 import { useIsActive } from '../../../hooks/useIsActive';
+import { useTranslation } from 'react-i18next';
 
 import s from '../footer.module.scss';
 
 export const NavigationFooter = () => {
   const { onModal, isActiveModal } = useIsActive();
-
+  const { t } = useTranslation()
   return (
     <nav className={s.nav}>
       <h2 onClick={onModal} id="dropDownsFooter" className={s.nav_title}>
-        МЕНЮ САЙТУ
+        {t('footer.nav.title')}
       </h2>
       <IoIosArrowDown
         className={
@@ -38,7 +39,7 @@ export const NavigationFooter = () => {
             duration={500}
             className={s.nav_text}
           >
-            <span>Про нас</span>
+            <span>{t('footer.nav.list.about_us')}</span>
           </Link>
         </li>
         <li className={s.nav_item}>
@@ -49,7 +50,7 @@ export const NavigationFooter = () => {
             duration={500}
             className={s.nav_text}
           >
-            <span>Наші Послуги</span>
+            <span>{t('footer.nav.list.services')}</span>
           </Link>
         </li>
         <li className={s.nav_item}>
@@ -60,7 +61,7 @@ export const NavigationFooter = () => {
             duration={500}
             className={s.nav_text}
           >
-            <span>Пропозиції сьогодні</span>
+            <span>{t('footer.nav.list.offers')}</span>
           </Link>
         </li>
         <li className={s.nav_item}>
@@ -71,7 +72,7 @@ export const NavigationFooter = () => {
             duration={500}
             className={s.nav_text}
           >
-            <span>Партнерам</span>
+            <span>{t('footer.nav.list.partnership')}</span>
           </Link>
         </li>
       </ul>

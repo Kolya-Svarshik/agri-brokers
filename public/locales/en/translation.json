@@ -1,0 +1,173 @@
+{
+  "header": {
+    "logo": {
+      "photo_alt": "Agri Brokers Ukraine logo"
+    },
+    "nav": {
+      "menu": {
+        "text": "Site menu",
+        "list": {
+          "about_us": "About us",
+          "services": {
+            "text": "We provide",
+            "manufacturers": "For agricultural producers",
+            "processors": "For processors",
+            "traders": "For traders"
+          },
+          "offers": {
+            "text": "Offers today",
+            "purchase": "Buy today",
+            "sale": "Today on sale"
+          },
+          "partnership": "For partners"
+        }
+      },
+      "control": {
+        "button": {
+          "exit": "Close"
+        }
+      }
+    },
+    "contact": {
+      "title": "Contacts"
+    }
+  },
+  "main": {
+    "hero": {
+      "title": "Agri Brokers Ukraine",
+      "text": "The best contracts for the sale and purchase of agricultural products.",
+      "button": {
+        "about_us": "About us",
+        "partnership": "For processors",
+        "link": {
+          "facebook": "Our Facebook",
+          "telegram": {
+            "sale": "Sale of grain",
+            "purchase": "Purchase of grain"
+          }
+        }
+      }
+    },
+    "our_services": {
+      "title": "Our Services",
+      "cart": {
+        "manufacturers": {
+          "title": "For agricultural producers",
+          "text": {
+            "one": "Agri Brokers Ukraine helps farmers to sell their crops profitably on the best terms for them.",
+            "two": "Our experts study market trends and help you conclude the most profitable contracts.",
+            "three": "We cooperate with a large number of trading companies, which helps us to get the best prices for our agricultural and processing customers, both in Ukraine and abroad. We offer contracts on FCA, CPT, FOB, DAP, CIF and other terms."
+          },
+          "photo_alt": "People shake hands"
+        },
+        "processors": {
+          "title": "For processors",
+          "text": "Agri Brokers Ukraine helps processors to secure raw materials and efficiently sell processed products. Our team of experts will help you to conclude the best contracts for sunflower meal, soybeans, sunflower oil, rapeseed oil, soybean oil and many other products, providing you with optimal conditions.",
+          "photo_alt": "Butter and sunflower oil"
+        },
+        "traders": {
+          "title": "For traders",
+          "text": "Cooperation with Agri Brokers Ukraine enables grain traders to obtain the necessary volumes of grain of the required quality at reasonable prices and with the required delivery time. Working with a large number of farmers from all over Ukraine, we will help you to conclude the best contracts for the purchase of corn, wheat, barley, soybeans, rapeseed and other crops, as well as their products on optimal terms.",
+          "photo_alt": "A plant where grain is unloaded"
+        }
+      }
+    },
+    "offers": {
+      "title": "We offer",
+      "cart": {
+        "buy": {
+          "title": "Buy today:",
+          "text": {
+            "one": "If you are a farmer, processor or trader of agricultural products, you can sell your products at favorable prices with us. Visit our Telegram channel, where you will find current purchase offers from our partners and our managers will advise you on the details and terms of contracts.",
+            "two": "If you don't find the offer you need on our channel, please contact us and we will sell your products at a good price.",
+            "three": "Follow the link:"
+          },
+          "link": {
+            "telegram": {
+              "purchase": "Purchase of grain"
+            }
+          },
+          "photo_alt": "Cereals"
+        },
+        "sale": {
+          "title": "On sale today:",
+          "text": {
+            "one": "Check out the current offers from our agricultural producers and processors for the sale of agricultural products on our Telegram channel. There you will find the latest information on availability, volumes, quality and terms of sale. Our experienced managers will be happy to provide you with advice and answer all your questions. If you don't find the right offer, contact our manager and place the necessary order, and we will help you secure it.",
+            "two": "Follow the link for offers:"
+          },
+          "link": {
+            "telegram": {
+              "sale": "Sale of grain"
+            }
+          },
+          "photo_alt": "Wheat"
+        }
+      }
+    },
+    "partnership": {
+      "title": "Partners",
+      "cart": {
+        "partners": {
+          "text": {
+            "one": "Agri Brokers Ukraine is open for partnership for all companies from Ukraine and abroad who are interested in good deals on the purchase and sale of agricultural products. Cooperation with us helps you succeed by expanding your opportunities in agricultural trade, including transactions with EU countries and around the world.",
+            "two": "Agri Brokers Ukraine will help farmers, traders, processors, brokers and other companies achieve their goals in the domestic and international markets."
+          },
+          "link": {
+            "text": {
+              "span": "For partnership, write to us by mail, messenger or call -",
+              "link": "Contacts"
+            }
+          },
+          "photo_alt": "A team of people to raise the team spirit when putting hands on hands"
+        }
+      }
+    },
+    "about_us": {
+      "title": "About us",
+      "cart": {
+        "about_us": {
+          "text": "Agri Brokers Ukraine is a brokerage company that helps you get the best contracts for the sale and purchase of agricultural products both in Ukraine and abroad. We provide comprehensive services and make the best deals, helping to increase the profitability of your business. We work with traders, farmers, processors and intermediaries to provide favorable contracts. Our main goal is a satisfied customer, and our team of experts will make every effort to successfully fulfill your requests. Cooperation with Agri Brokers Ukraine will bring you success!",
+          "photo_alt": "People are sitting and talking in the entertainment hall"
+        }
+      }
+    },
+    "quote": {
+      "text": "Cooperation with Agri Brokers Ukraine will bring you success and positive emotions. We will ensure profitable transactions, efficient order fulfillment and a professional approach to each partner. Choose Agri Brokers Ukraine to conclude profitable contracts and expand your business opportunities."
+    }
+  },
+  "footer": {
+    "logo": {
+      "photo_alt": "Agri Brokers Ukraine logo",
+      "text": "Agri Brokers Ukraine is a reliable partner that understands the value of business and helps to obtain the best contracts for the sale and purchase of agricultural products both in Ukraine and abroad."
+    },
+    "social": {
+      "title": "FOLLOW US",
+      "link": {
+        "facebook": "Our Facebook"
+      }
+    },
+    "nav": {
+      "title": "SITE MENU",
+      "list": {
+        "about_us": "About us",
+        "services": "We provide",
+        "offers": "Offers today",
+        "partnership": "For partners"
+      }
+    },
+    "contact": {
+      "title": "Contacts",
+      "info": {
+        "tel": "Phones:",
+        "email": "E-mail address:",
+        "geo": {
+          "title": "Office address:",
+          "text": "2b Akademika Williamsa Street, Kyiv"
+        }
+      }
+    },
+    "copy": {
+      "text": " All rights reserved."
+    }
+  }
+}

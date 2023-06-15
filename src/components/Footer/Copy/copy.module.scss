@@ -1,4 +1,4 @@
-@import '../../style/variables.scss';
+@import '../../../style/variables.scss';
 
 .copy {
   display: flex;
@@ -12,6 +12,8 @@
 
   &_text {
     color: $whiteColor;
+
+    text-align: center;
   }
 }
 
@@ -19,4 +21,5 @@
   color: $quoteColor;
 
   font-size: 14px;
+  text-align: center;
 }

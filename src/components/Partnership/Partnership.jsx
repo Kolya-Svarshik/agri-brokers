@@ -6,24 +6,26 @@ import people1PhotoJpg from '../../img/people1.jpg';
 import s from './partnership.module.scss';
 import { CustomAnimateBox } from '../CustomAnimateBox/CustomAnimateBox';
 import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
+import { useTranslation } from 'react-i18next';
 
 const Partnership = () => {
+  const { t } = useTranslation()
   return (
     <section className="container" id="partnership">
       <div className={s.section}>
-        <h2 className={s.partnership_tetle}>Партнерам</h2>
+        <h2 className={s.partnership_tetle}>{t('main.partnership.title')}</h2>
         <ul className={s.cart}>
           <CustomAnimateBox classNameAnimate={s.cart_item}>
             <>
               <div className={s.cart_elem}>
                 <p className={s.elem_text}>
-                  Agri Brokers Ukraine відкрита для партнерства для всіх компаній як з України, так і з-за кордону, які зацікавлені в гарних угодах з купівлі продажу продукції сільського-господарства. Співпраця з нами допомагає вам досягати успіху, розширюючи ваші можливості в торгівлі агропродукцією, включаючи угоди з країнами ЄС та по всьому світу.
+                  {t('main.partnership.cart.partners.text.one')}
                 </p>
                 <p className={s.elem_text}>
-                  Agri Brokers Ukraine допоможе фермерам, трейдерам, переробникам, брокерським та іншим компаніям досягнути своїх цілей на внутрішньому та міжнародному ринках.
+                  {t('main.partnership.cart.partners.text.two')}
                 </p>
                 <span className={s.elem_span}>
-                  Щодо партнерства пишіть на пошту, в месенджери або телефонуйте -
+                  {t('main.partnership.cart.partners.link.text.span')}
                 </span>
                 <Link
                   to="contact"
@@ -32,10 +34,10 @@ const Partnership = () => {
                   duration={500}
                   className={s.elem_link}
                 >
-                  Контакти
+                  {t('main.partnership.cart.partners.link.text.link')}
                 </Link>
               </div>
-              <CustomImagePicture classNamePhoto={s.cart_photo} webp={people1PhotoWebp} photo={people1PhotoJpg} altPhoto='Команда людей для підняття командного духу в коли кладуть руки на руки' />
+              <CustomImagePicture classNamePhoto={s.cart_photo} webp={people1PhotoWebp} photo={people1PhotoJpg} altPhoto={t('main.partnership.cart.partners.photo_alt')} />
             </>
           </CustomAnimateBox>
         </ul>

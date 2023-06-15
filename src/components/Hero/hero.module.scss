@@ -31,22 +31,24 @@
     justify-content: center;
     align-items: center;
 
-    width: 80px;
-    height: 20px;
+    max-width: 200px;
 
     color: $whiteColor;
     border-radius: 100px;
+
+    cursor: pointer;
+
     transition: 0.5s;
 
     &:first-child {
-      margin-bottom: 20px;
-
+      border: 2px solid $buttonGreenColor;
       background: $buttonGreenColor;
 
       &:hover,
       &:focus {
         color: $whiteColor;
         background-color: $buttonFocusGreenColor;
+        border-color: $buttonFocusGreenColor;
       }
     }
 
@@ -114,7 +116,6 @@
   width: 30px;
   height: 30px;
   fill: $blackColor;
-  // color: $blackColor;
 }
 
 .social_text {
@@ -135,12 +136,37 @@
   z-index: -1;
 }
 
-@media screen and (min-width: $modilWidth) {
-  .hero {
-    &_button {
-      width: 80px;
-      height: 20px;
+// @media screen and (min-width: $modilWidth) {
+//   .hero {
+//     &_button {
+//       height: 20px;
 
+//       &:first-child {
+//         margin-bottom: 20px;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 509px) {
+// .hero_nav {
+//   display: grid;
+//   align-items: flex-start;
+//   justify-content: space-between;
+// }
+
+// .hero_button {
+//   &:first-child {
+//     padding: 15px 61px;
+//   }
+// }
+// }
+
+@media screen and (max-width: ($modilBigWidth - 1px)) {
+  .hero {
+    padding: 45px 20px 120px;
+
+    &_button {
       &:first-child {
         margin-bottom: 20px;
       }
@@ -148,18 +174,23 @@
   }
 }
 
-@media screen and (max-width: ($modilBigWidth - 1px)) {
-  .hero {
-    padding: 45px 20px 120px;
-  }
-}
-
 @media screen and (min-width: $modilBigWidth) {
   .hero_nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
     width: fit-content;
+  }
+}
+
+@media screen and (min-width: $modilBigWidth) and (max-width: 509px) {
+  .hero_nav {
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  .hero_nav {
+    gap: 40px;
   }
 }
 
