@@ -1,12 +1,13 @@
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
+
+import { CustomAnimateBox } from '../CustomAnimateBox/CustomAnimateBox';
+import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
 
 import people1PhotoWebp from '../../img/people1.webp';
 import people1PhotoJpg from '../../img/people1.jpg';
 
 import s from './partnership.module.scss';
-import { CustomAnimateBox } from '../CustomAnimateBox/CustomAnimateBox';
-import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
-import { useTranslation } from 'react-i18next';
 
 const Partnership = () => {
   const { t } = useTranslation()
@@ -29,12 +30,13 @@ const Partnership = () => {
                 </span>
                 <Link
                   to="contact"
+                  href="#contact"
                   smooth={true}
                   offset={-100}
                   duration={500}
                   className={s.elem_link}
                 >
-                  {t('main.partnership.cart.partners.link.text.link')}
+                  <strong>{t('main.partnership.cart.partners.link.text.link')}</strong>
                 </Link>
               </div>
               <CustomImagePicture classNamePhoto={s.cart_photo} webp={people1PhotoWebp} photo={people1PhotoJpg} altPhoto={t('main.partnership.cart.partners.photo_alt')} />

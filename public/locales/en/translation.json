@@ -5,6 +5,7 @@
     },
     "nav": {
       "menu": {
+        "button_alt": "Button open menu",
         "text": "Site menu",
         "list": {
           "about_us": "About us",
@@ -24,6 +25,7 @@
       },
       "control": {
         "button": {
+          "facebook": "Facebook Agri Brokers",
           "exit": "Close"
         }
       }
@@ -46,6 +48,9 @@
             "purchase": "Purchase of grain"
           }
         }
+      },
+      "video": {
+        "error_text": "Your browser does not support the video tag."
       }
     },
     "our_services": {

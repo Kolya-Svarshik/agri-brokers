@@ -1,24 +1,28 @@
 import React from 'react'
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 export const CustomImagePicture = ({
     classNamePhoto,
     webp,
+    webp2x = { webp },
     photo,
     mediaType = "image/webp",
     altPhoto = "Image",
     ...deleegated }) => {
     return (
-        <picture >
-            <source className={classNamePhoto} srcSet={webp} type={mediaType} />
-            <LazyLoadImage
-                className={classNamePhoto}
-                src={photo}
-                alt={altPhoto}
-                threshold={500}
-                {...deleegated}
+        <picture>
+            <source media="(max-width: 420px)" className={classNamePhoto}
+                srcSet={webp2x}
+                type={mediaType} />
+            <source className={classNamePhoto}
+                srcSet={webp}
+                type={mediaType}
             />
-        </picture >
+            <img src={photo}
+                className={classNamePhoto}
+                alt={altPhoto}
+                {...deleegated}
+                loading='lazy'
+            />
+        </picture>
     )
 }

@@ -1,9 +1,10 @@
-import OutsideClickHandler from '../../hooks/OutsideClickHandler';
-
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
-import logoImgPng from '../../img/logo.png';
-import logoImgWebp from '../../img/logo.webp';
+import OutsideClickHandler from '../../hooks/OutsideClickHandler';
+import { useIsActive } from '../../hooks/useIsActive';
+import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaFacebookF } from 'react-icons/fa';
@@ -11,14 +12,10 @@ import { FiPhoneCall } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { IoIosArrowDown } from 'react-icons/io';
 
-import { useIsActive } from '../../hooks/useIsActive';
-
+import logoImgWebp from '../../img/logo.webp';
+import logoImgPng from '../../img/logo.png';
 
 import s from './header.module.scss';
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
-// import { wait } from '@testing-library/user-event/dist/utils';
 
 const Header = () => {
   const { onModal, isActiveModal } = useIsActive();
@@ -33,10 +30,7 @@ const Header = () => {
     setIsOpen(false);
   };
 
-  // const locales = {
-  //   en: { title: 'English' },
-  //   uk: { title: 'Ukraine' }
-  // }
+
 
   const locales = {
     en: { title: 'Eng' },
@@ -46,26 +40,14 @@ const Header = () => {
   return (
     <header className={s.header}>
       <div className="container">
-        {/* <ul>
-          {Object.keys(locales).map((locale) => (<li key={locale}><button style={{ fontWeight: i18n.resolvedlanguage === locale ? 'bold' : 'normal' }} type='submit' onClick={() => i18n.changeLanguage(locale)}>
-            {locales[locale].title.slice(0, 3)}
-          </button></li>))}
-        </ul> */}
-        {/* <select
-        >
-          {Object.keys(locales).map((locale) => (<option value={locale} style={{ fontWeight: i18n.resolvedlanguage === locale ? 'bold' : 'normal' }} onChange={() => i18n.changeLanguage(locale)}>
-            {locales[locale].title.slice(0, 3)}
-          </option>))}
-        </select> */}
-
         <div className={s.section}>
-          <Link onClick={() => scroll.scrollToTop()} to=".">
-            <CustomImagePicture classNamePhoto={s.logo} webp={logoImgWebp} photo={logoImgPng} altPhoto={t('header.logo.photo_alt')} width="200px" />
+          <Link onClick={() => scroll.scrollToTop()} to="." href="#">
+            <CustomImagePicture classNamePhoto={s.logo} webp={logoImgWebp} photo={logoImgPng} altPhoto={t('header.logo.photo_alt')} />
           </Link>
-
           <button
             type="button"
             name="menu"
+            aria-label={t('header.nav.menu.button_alt')}
             onClick={onModal}
             className={s.button_menu}
           >
@@ -93,6 +75,7 @@ const Header = () => {
                   <li className={s.nav_item}>
                     <Link
                       to="about_us"
+                      href="#about_us"
                       smooth={true}
                       offset={-100}
                       duration={500}
@@ -106,6 +89,7 @@ const Header = () => {
                   <li className={`${s.nav_elem} ${s.nav_item}`}>
                     <Link
                       to="services"
+                      href="#services"
                       smooth={true}
                       offset={-100}
                       duration={500}
@@ -120,6 +104,7 @@ const Header = () => {
                       <li className={s.elem_item}>
                         <Link
                           to="services_manufacturers"
+                          href="#services_manufacturers"
                           smooth={true}
                           offset={-100}
                           duration={500}
@@ -131,6 +116,7 @@ const Header = () => {
                       <li className={s.elem_item}>
                         <Link
                           to="services_processors"
+                          href="#services_processors"
                           smooth={true}
                           offset={-100}
                           duration={500}
@@ -142,6 +128,7 @@ const Header = () => {
                       <li className={s.elem_item}>
                         <Link
                           to="services_traders"
+                          href="#services_traders"
                           smooth={true}
                           offset={-100}
                           duration={500}
@@ -155,6 +142,7 @@ const Header = () => {
                   <li className={`${s.nav_elem} ${s.nav_item}`}>
                     <Link
                       to="offers"
+                      href="#offers"
                       smooth={true}
                       offset={-100}
                       duration={500}
@@ -169,6 +157,7 @@ const Header = () => {
                       <li className={s.elem_item}>
                         <Link
                           to="offers_purchase"
+                          href="#offers_purchase"
                           smooth={true}
                           offset={-100}
                           duration={500}
@@ -180,6 +169,7 @@ const Header = () => {
                       <li className={s.elem_item}>
                         <Link
                           to="offers_sale"
+                          href="#offers_sale"
                           smooth={true}
                           offset={-100}
                           duration={500}
@@ -194,6 +184,7 @@ const Header = () => {
                   <li className={s.nav_item}>
                     <Link
                       to="partnership"
+                      href="#partnership"
                       smooth={true}
                       offset={-100}
                       duration={500}
@@ -234,6 +225,7 @@ const Header = () => {
                     <a
                       href="https://www.facebook.com/profile.php?id=100093057441973"
                       target="_blank"
+                      aria-label={t('header.nav.control.button.facebook')}
                       className={s.control_link}
                       rel="noreferrer"
                     >
@@ -254,15 +246,6 @@ const Header = () => {
               </div>
             </nav>
           </div>
-
-          {/* <input type="checkbox" className="toggle toggle-success" checked /> */}
-          {/* <select
-          defaultValue={selectedLanguage} onChange={chooseLanguage}
-          >
-            <option value="uk">Ukr</option>
-            <option value="en">Eng</option>
-          </select> */}
-
           <OutsideClickHandler onOutsideClick={handleClose}>
             <div className={s.contact}>
               <button
@@ -311,8 +294,9 @@ const Header = () => {
             {Object.keys(locales).map((locale) => (
               <li key={locale} className={s.language_item}>
                 <button
-                  // className={`${s.language_button} ${s.activebutton}`}
-                  className={i18n.resolvedLanguage === locale ? `${s.language_button} ${s.activebutton}` : `${s.language_button} ${s.inActivebutton}`}
+                  className={i18n.resolvedLanguage === locale ?
+                    `${s.language_button} ${s.activebutton}` :
+                    `${s.language_button} ${s.inActivebutton}`}
                   type='submit' onClick={() => i18n.changeLanguage(locale)}>
                   {locales[locale].title}
                 </button>

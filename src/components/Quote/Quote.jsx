@@ -1,6 +1,6 @@
-import s from './quote.module.scss';
-
 import { useTranslation } from 'react-i18next';
+
+import s from './quote.module.scss';
 
 const Quote = () => {
   const { t } = useTranslation()

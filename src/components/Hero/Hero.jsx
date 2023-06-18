@@ -1,11 +1,12 @@
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
+import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import ReactPlayer from 'react-player/file'
 
 import bgVideo from '../../media/hero_video.mp4';
 
-import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
-
 import s from './hero.module.scss';
-import { useTranslation } from 'react-i18next';
+
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -20,6 +21,7 @@ const Hero = () => {
           <div className={s.hero_nav}>
             <Link
               to="about_us"
+              href="#about_us"
               smooth={true}
               offset={-100}
               duration={500}
@@ -29,6 +31,7 @@ const Hero = () => {
             </Link>
             <Link
               to="partnership"
+              href="#partnership"
               smooth={true}
               offset={-100}
               duration={500}
@@ -81,10 +84,18 @@ const Hero = () => {
         </div>
       </section>
       <div className={s.video}>
-        <video autoPlay loop muted playsInline className={s.video_item}>
-          <source src={bgVideo} type="video/mp4" />
-          {/* Your browser does not support the video tag. */}
-        </video>
+        <ReactPlayer
+          url={bgVideo}
+          playing
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          width="100%"
+          height="100%"
+          style={{ objectFit: "cover" }}
+          className={s.video_item}
+          type="video/mp4" />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@
     },
     "nav": {
       "menu": {
+        "button_alt": "Кнопка відкриття меню",
         "text": "Меню сайту",
         "list": {
           "about_us": "Про нас",
@@ -24,6 +25,7 @@
       },
       "control": {
         "button": {
+          "facebook": "Facebook Agri Brokers",
           "exit": "Закрити"
         }
       }
@@ -46,6 +48,9 @@
             "purchase": "Купівля зерна"
           }
         }
+      },
+      "video": {
+        "error_text": "Ваш браузер не підтримує тег video."
       }
     },
     "our_services": {

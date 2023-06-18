@@ -10,9 +10,10 @@ const Copy = () => {
       <p className={s.copy_text}>
         &copy; <span>{currentYear}</span>{t("footer.copy.text")}
       </p>
-      <p className={s.created_text}>
-        Created by <a className={`${s.created_text} ${s.created_link}`} href="https://github.com/Kolya-Svarshik">Nazar Buialo</a>
-      </p>
+      <a className={s.created_link}
+        target="_blank"
+        href="https://github.com/Kolya-Svarshik"
+        rel="noreferrer" >Created by Nazar Buialo</a>
     </div>
   );
 };

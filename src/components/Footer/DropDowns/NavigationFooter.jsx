@@ -1,11 +1,9 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
+import { useIsActive } from '../../../hooks/useIsActive';
 
 import { IoIosArrowDown } from 'react-icons/io';
-
-import { useIsActive } from '../../../hooks/useIsActive';
-import { useTranslation } from 'react-i18next';
 
 import s from '../footer.module.scss';
 
@@ -34,6 +32,7 @@ export const NavigationFooter = () => {
         <li className={s.nav_item}>
           <Link
             to="about_us"
+            href="#about_us"
             smooth={true}
             offset={-100}
             duration={500}
@@ -45,6 +44,7 @@ export const NavigationFooter = () => {
         <li className={s.nav_item}>
           <Link
             to="services"
+            href="#services"
             smooth={true}
             offset={-100}
             duration={500}
@@ -56,6 +56,7 @@ export const NavigationFooter = () => {
         <li className={s.nav_item}>
           <Link
             to="offers"
+            href="#offers"
             smooth={true}
             offset={-100}
             duration={500}
@@ -67,6 +68,7 @@ export const NavigationFooter = () => {
         <li className={s.nav_item}>
           <Link
             to="partnership"
+            href="#partnership"
             smooth={true}
             offset={-100}
             duration={500}

@@ -1,10 +1,12 @@
-import peoplePhoto2Webp from '../../img/people2.webp';
-import peoplePhoto2Jpg from '../../img/people2.jpg';
+import { useTranslation } from 'react-i18next';
+
+import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
 import { CustomAnimateBox } from '../CustomAnimateBox/CustomAnimateBox';
 
+import peoplePhoto2Webp from '../../img/people2.webp';
+import peoplePhoto2Jpg from '../../img/people2.jpg';
+
 import s from './aboutUs.module.scss';
-import { CustomImagePicture } from '../CustomImagePicture/CustomImagePicture';
-import { useTranslation } from 'react-i18next';
 
 const AboutUs = () => {
   const { t } = useTranslation()

@@ -10,8 +10,6 @@
 
 .contact {
   &_title {
-    // width: 100%;
-
     color: $whiteColor;
 
     font-weight: 600;
@@ -29,10 +27,15 @@
 
   &_text {
     margin-left: 20px;
+    margin-bottom: 5px;
 
-    color: $textFooterColor;
+    color: $whiteColor;
 
     line-height: 1.8;
+
+    cursor: default;
+
+    opacity: 0.4;
   }
 
   &_link {
@@ -44,6 +47,10 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+
+    &_marg:not(:last-child) {
+      margin-bottom: 20px;
+    }
 
     &_underline {
       text-decoration: underline;
@@ -78,8 +85,6 @@
 
 .nav {
   &_title {
-    // width: 100%;
-
     color: $whiteColor;
 
     font-weight: 600;
@@ -132,6 +137,8 @@
 }
 
 .logo {
+  width: 200px;
+  height: 89px;
   margin-bottom: 20px;
 
   &_text {
@@ -146,8 +153,6 @@
   color: $whiteColor;
 
   &_tetle {
-    // width: 100%;
-
     color: $whiteColor;
 
     font-weight: 600;
@@ -372,12 +377,12 @@
         height: 0px;
       }
       to {
-        height: 235px;
+        height: 260px;
       }
     }
     @keyframes slideinContactClose {
       from {
-        height: 235px;
+        height: 260px;
       }
 
       to {

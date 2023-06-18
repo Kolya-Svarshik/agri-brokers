@@ -1,10 +1,10 @@
+import { useTranslation } from 'react-i18next';
+import { useIsActive } from '../../../hooks/useIsActive';
+
 import { FiPhoneCall } from 'react-icons/fi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { MdLocationPin } from 'react-icons/md';
 import { IoIosArrowDown } from 'react-icons/io';
-
-import { useIsActive } from '../../../hooks/useIsActive';
-import { useTranslation } from 'react-i18next';
 
 import s from '../footer.module.scss';
 
@@ -32,11 +32,11 @@ export const ContactFooter = () => {
       >
         <li className={s.contact_item}>
           <p className={s.contact_text}>{t('footer.contact.info.tel')}</p>
-          <a href="tel:+380675211100" className={s.contact_link}>
+          <a href="tel:+380675211100" className={`${s.contact_link} ${s.contact_link_marg}`}>
             <FiPhoneCall className={s.icon_tel} />
             <span>+38 (067) 521 11 00</span>
           </a>
-          <a href="tel:+380675202508" className={s.contact_link}>
+          <a href="tel:+380675202508" className={`${s.contact_link} ${s.contact_link_marg}`}>
             <FiPhoneCall className={s.icon_tel} />
             <span>+38 (067) 520 25 08</span>
           </a>
