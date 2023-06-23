@@ -1,5 +1,7 @@
 import { Suspense, useState, lazy } from 'react';
 
+import { HelmetComponent } from './components/HelmetComponent/HelmetComponent';
+
 
 const Header = lazy(() =>
   import('./components/Header/Header'),
@@ -39,6 +41,7 @@ export const App = () => {
 
   return (
     <Suspense fallback='...loading'>
+      <HelmetComponent />
       <Header isActive={isActive} setIsActive={setIsActive} />
       <Hero />
       <OurServices />
