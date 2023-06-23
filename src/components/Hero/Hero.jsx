@@ -1,7 +1,6 @@
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
-import ReactPlayer from 'react-player/file'
 
 import bgVideo from '../../media/hero_video.mp4';
 
@@ -84,18 +83,11 @@ const Hero = () => {
         </div>
       </section>
       <div className={s.video}>
-        <ReactPlayer
-          url={bgVideo}
-          playing
-          loop
-          muted
-          playsinline
-          preload="metadata"
-          width="100%"
-          height="100%"
-          style={{ objectFit: "cover" }}
-          className={s.video_item}
-          type="video/mp4" />
+        <video autoPlay loop muted playsInline preload="metadata" className={s.video_item}>
+          <source src={bgVideo} type="video/mp4" />
+          {t('main.hero.video.error_text')}
+        </video>
+
       </div>
     </div>
   );
