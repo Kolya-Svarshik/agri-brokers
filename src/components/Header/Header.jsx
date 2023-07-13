@@ -205,6 +205,16 @@ const Header = () => {
                     </a>
                   </li>
                   <li className={s.hookup_item}>
+                    <a href="tel:+380675230304" className={s.hookup_link}>
+                      <span>+38 (067) 523 03 04</span>
+                    </a>
+                  </li>
+                  <li className={s.hookup_item}>
+                    <a href="tel:+380931249898" className={s.hookup_link}>
+                      <span>+38 (093) 124 98 98</span>
+                    </a>
+                  </li>
+                  <li className={s.hookup_item}>
                     <a href="tel:+380675202508" className={s.hookup_link}>
                       <span>+38 (067) 520 25 08</span>
                     </a>
@@ -271,6 +281,18 @@ const Header = () => {
                     </a>
                   </li>
                   <li className={s.contact_item}>
+                    <a href="tel:+380675230304" className={s.elem_link}>
+                      <FiPhoneCall className={s.icon_tel} />
+                      <span>+38 (067) 523 03 04</span>
+                    </a>
+                  </li>
+                  <li className={s.contact_item}>
+                    <a href="tel:+380931249898" className={s.elem_link}>
+                      <FiPhoneCall className={s.icon_tel} />
+                      <span>+38 (093) 124 98 98</span>
+                    </a>
+                  </li>
+                  <li className={s.contact_item}>
                     <a href="tel:+380675202508" className={s.elem_link}>
                       <FiPhoneCall className={s.icon_tel} />
                       <span>+38 (067) 520 25 08</span>
@@ -278,11 +300,11 @@ const Header = () => {
                   </li>
                   <li className={s.contact_item}>
                     <a
-                      href="mailto:y.otsabryk@gmail.com"
+                      href="mailto:agribrokersukraine@gmail.com"
                       className={s.elem_link}
                     >
                       <AiOutlineMail className={s.icon_mail} />
-                      <span>y.otsabryk@gmail.com</span>
+                      <span>agribrokersukraine@gmail.com</span>
                     </a>
                   </li>
                 </ul>
