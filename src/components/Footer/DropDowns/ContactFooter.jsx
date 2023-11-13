@@ -40,10 +40,6 @@ export const ContactFooter = () => {
             <FiPhoneCall className={s.icon_tel} />
             <span>+38 (067) 523 03 04</span>
           </a>
-          <a href="tel:+380931249898" className={`${s.contact_link} ${s.contact_link_marg}`}>
-            <FiPhoneCall className={s.icon_tel} />
-            <span>+38 (093) 124 98 98</span>
-          </a>
           <a href="tel:+380675202508" className={`${s.contact_link} ${s.contact_link_marg}`}>
             <FiPhoneCall className={s.icon_tel} />
             <span>+38 (067) 520 25 08</span>
@@ -59,7 +55,7 @@ export const ContactFooter = () => {
         <li className={s.contact_item}>
           <p className={s.contact_text}>{t('footer.contact.info.geo.title')}</p>
           <a
-            href="https://goo.gl/maps/DXx6PMhRGwQzJaxa6"
+            href="https://maps.app.goo.gl/xEYwy5KgSbpsbTft9"
             target="_blank"
             className={`${s.contact_link} ${s.contact_link_underline}`}
             rel="noreferrer"
