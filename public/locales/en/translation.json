@@ -44,8 +44,8 @@
         "link": {
           "facebook": "Our Facebook",
           "telegram": {
-            "sale": "Sale of grain",
-            "purchase": "Purchase of grain"
+            "sale": "FARMERS SELL",
+            "purchase": "TRADERS BUY"
           }
         }
       },
@@ -89,7 +89,7 @@
           },
           "link": {
             "telegram": {
-              "purchase": "Purchase of grain"
+              "purchase": "TRADERS BUY"
             }
           },
           "photo_alt": "Cereals"
@@ -102,7 +102,7 @@
           },
           "link": {
             "telegram": {
-              "sale": "Sale of grain"
+              "sale": "FARMERS SELL"
             }
           },
           "photo_alt": "Wheat"
