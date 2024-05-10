@@ -1,0 +1,145 @@
+@import '../../style/variables.scss';
+
+.modal_open {
+  overflow: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  overflow-y: scroll;
+
+  z-index: 1000;
+}
+
+.modal {
+  display: block;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 40px;
+  border-radius: 4px;
+
+  background-color: #fff;
+
+  overflow: hidden;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  z-index: 10;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  @media screen and (max-width: ($tabletWidth - 1px)) {
+    width: 70vw;
+    height: 70vh;
+
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: $tabletWidth) and (max-width: $tabletBigWidth) {
+    width: 450px;
+    height: 350px;
+  }
+
+  @media screen and (min-width: $tabletBigWidth) {
+    width: 528px;
+    height: 350px;
+  }
+}
+
+.is_hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.policy {
+  @media screen and (max-width: ($tabletWidth - 1px)) {
+    height: 100%;
+
+    font-size: 10px;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    overflow-y: scroll;
+  }
+
+  @media screen and (min-width: $tabletWidth) and (max-width: $tabletBigWidth) {
+    height: 100%;
+
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &_text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: #212121;
+
+    text-align: center;
+
+    @media screen and (max-width: $tabletBigWidth) {
+      height: 100%;
+      text-align: justify;
+    }
+  }
+}
+
+.modal_exit {
+  display: flex;
+  position: inherit;
+  justify-content: center;
+  align-items: center;
+
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: #fff;
+
+  box-shadow: 0px 2px 1px rgb(0 0 0 / 20%), 0px 1px 1px rgb(0 0 0 / 14%),
+    0px 1px 3px rgb(0 0 0 / 12%);
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.icon_exit {
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  fill: #000;
+
+  transition: fill 250 $timingFunction;
+}
+
+.activeMobile {
+  opacity: 1;
+  transition: 250ms all linear;
+}
+
+.inActiveMobile {
+  opacity: 0;
+  transition: 250ms all linear;
+  pointer-events: none;
+}

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 html {
   overflow-x: hidden;
+  height: 100vh;
 }
 body {
   height: auto;
@@ -87,28 +88,28 @@ button {
   background-color: $heroBgc;
 }
 
-@media screen and (max-width: ($modilWidth - 1px)) {
+@media screen and (max-width: ($mobilWidth - 1px)) {
   .container {
     width: 100%;
   }
 }
 
-@media screen and (min-width: $modilWidth) {
+@media screen and (min-width: $mobilWidth) {
   .container {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
-@media screen and (min-width: $modilWidth) and (max-width: ($modilBigWidth - 1px)) {
+@media screen and (min-width: $mobilWidth) and (max-width: ($mobilBigWidth - 1px)) {
   .container {
-    max-width: $modilWidth;
+    max-width: $mobilWidth;
   }
 }
 
-@media screen and (min-width: $modilBigWidth) and (max-width: ($tabletWidth - 1px)) {
+@media screen and (min-width: $mobilBigWidth) and (max-width: ($tabletWidth - 1px)) {
   .container {
-    max-width: $modilBigWidth;
+    max-width: $mobilBigWidth;
   }
 }
 

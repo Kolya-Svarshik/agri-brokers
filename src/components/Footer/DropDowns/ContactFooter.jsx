@@ -19,7 +19,7 @@ export const ContactFooter = () => {
       <IoIosArrowDown
         className={
           !isActiveModal
-            ? `${s.icon_arrow} ${s.icon_arrow_activev}`
+            ? `${s.icon_arrow} ${s.icon_arrow_active}`
             : `${s.icon_arrow}`
         }
       />
@@ -47,6 +47,10 @@ export const ContactFooter = () => {
         </li>
         <li className={s.contact_item}>
           <p className={s.contact_text}>{t('footer.contact.info.email')}</p>
+          <a href="mailto:info@agribrokers.com.ua" className={s.contact_link}>
+            <AiOutlineMail className={s.icon_mail} />
+            <span>info@agribrokers.com.ua</span>
+          </a>
           <a href="mailto:agribrokersukraine@gmail.com" className={s.contact_link}>
             <AiOutlineMail className={s.icon_mail} />
             <span>agribrokersukraine@gmail.com</span>

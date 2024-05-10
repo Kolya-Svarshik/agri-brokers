@@ -14,7 +14,7 @@ const Partnership = () => {
   return (
     <section className="container" id="partnership">
       <div className={s.section}>
-        <h2 className={s.partnership_tetle}>{t('main.partnership.title')}</h2>
+        <h2 className={s.partnership_title}>{t('main.partnership.title')}</h2>
         <ul className={s.cart}>
           <CustomAnimateBox classNameAnimate={s.cart_item}>
             <>

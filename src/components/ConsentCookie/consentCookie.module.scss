@@ -1,0 +1,16 @@
+@import '../../style/variables.scss';
+
+.bar {
+  width: 100px;
+  background-color: #343333;
+  border-bottom: 1px solid #5f5e5e;
+}
+
+.policy {
+  border: 0;
+
+  color: $whiteColor;
+  background-color: $buttonTransColor;
+
+  text-decoration: underline;
+}

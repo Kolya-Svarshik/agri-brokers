@@ -18,7 +18,7 @@ const Offers = () => {
     <div className={s.bg_color}>
       <section className="container" id="offers">
         <div className={s.section}>
-          <h2 className={s.offers_tetle}>{t('main.offers.title')}</h2>
+          <h2 className={s.offers_title}>{t('main.offers.title')}</h2>
           <ul className={s.cart}>
             <CustomAnimateBox classNameAnimate={s.cart_item} idAnimate="offers_purchase">
               <>

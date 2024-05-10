@@ -14,8 +14,8 @@ import logoImgPng from '../../img/logo.png';
 
 import s from './footer.module.scss';
 
-const Footer = () => {
-  const { t } = useTranslation()
+const Footer = ({ onModal, isActiveModal }) => {
+  const { t } = useTranslation();
   return (
     <footer className={s.footer}>
       <div className="container">
@@ -23,18 +23,21 @@ const Footer = () => {
           <div className={s.logo_bloc}>
             <div className={s.logo_sheave}>
               <Link onClick={() => scroll.scrollToTop()} to="." href="#">
-                <CustomImagePicture classNamePhoto={s.logo} webp={logoImgWebp} photo={logoImgPng} altPhoto={t('footer.logo.photo_alt')} />
+                <CustomImagePicture
+                  classNamePhoto={s.logo}
+                  webp={logoImgWebp}
+                  photo={logoImgPng}
+                  altPhoto={t('footer.logo.photo_alt')}
+                />
               </Link>
-              <p className={s.logo_text}>
-                {t('footer.logo.text')}
-              </p>
+              <p className={s.logo_text}>{t('footer.logo.text')}</p>
             </div>
             <Social />
           </div>
           <NavigationFooter />
           <ContactFooter />
         </div>
-        <Copy />
+        <Copy onModal={onModal} isActiveModal={isActiveModal} />
       </div>
     </footer>
   );

@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaTelegramPlane } from 'react-icons/fa';
+import { AiFillInstagram } from "react-icons/ai";
 
 import bgVideo from '../../media/hero_video.mp4';
 
@@ -51,6 +52,19 @@ const Hero = () => {
                   <FaFacebookF className={s.icon_facebook} />
                 </div>
                 <p>{t('main.hero.button.link.facebook')}</p>
+              </a>
+            </li>
+            <li className={s.link_item}>
+              <a
+                href="https://www.instagram.com/agri_brokers_ukraine?igsh=MWh3cWh6MjV5ZXRjOA%3D%3D"
+                target="_blank"
+                rel="noreferrer"
+                className={s.social_text}
+              >
+                <div className={s.icon_button}>
+                  <AiFillInstagram className={s.icon_instagram} />
+                </div>
+                <p>{t('main.hero.button.link.instagram')}</p>
               </a>
             </li>
             <li className={s.link_item}>

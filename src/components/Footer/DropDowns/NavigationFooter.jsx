@@ -18,7 +18,7 @@ export const NavigationFooter = () => {
       <IoIosArrowDown
         className={
           isActiveModal
-            ? `${s.icon_arrow} ${s.icon_arrow_activev}`
+            ? `${s.icon_arrow} ${s.icon_arrow_active}`
             : `${s.icon_arrow}`
         }
       />

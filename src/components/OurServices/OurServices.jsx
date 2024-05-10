@@ -18,7 +18,7 @@ const OurServices = () => {
   return (
     <section className="container" id="services">
       <div className={s.section}>
-        <h2 className={s.services_tetle}>{t('main.our_services.title')}</h2>
+        <h2 className={s.services_title}>{t('main.our_services.title')}</h2>
         <ul className={s.cart}>
           <CustomAnimateBox
             classNameAnimate={s.cart_item}

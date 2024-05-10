@@ -40,7 +40,6 @@
 
   &_link {
     display: flex;
-    margin-bottom: 5px;
 
     color: $whiteColor;
 
@@ -48,7 +47,11 @@
     font-size: 16px;
     line-height: 19px;
 
-    &_marg:not(:last-child) {
+    // &_marg:not(:last-child) {
+    //   margin-bottom: 20px;
+    // }
+
+    &:not(:last-child) {
       margin-bottom: 20px;
     }
 
@@ -152,7 +155,7 @@
 .social {
   color: $whiteColor;
 
-  &_tetle {
+  &_title {
     color: $whiteColor;
 
     font-weight: 600;
@@ -166,7 +169,6 @@
 
   &_bloc {
     display: flex;
-    justify-content: space-between;
   }
 
   &_text {
@@ -242,6 +244,27 @@
   fill: $blackColor;
 }
 
+.icon_instagram {
+  width: 25px;
+  height: 25px;
+  fill: $blackColor;
+}
+
+@media screen and (max-width: ($tabletWidth - 1px)) {
+  .section {
+    .social {
+      &_bloc {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+@media screen and (min-width: $tabletWidth) {
+  .link_item {
+    margin-right: 20px;
+  }
+}
+
 @media screen and (max-width: ($tabletBigWidth - 1px)) {
   .section {
     display: grid;
@@ -261,7 +284,7 @@
   .social {
     position: relative;
 
-    &_tetle {
+    &_title {
       padding: 15px;
 
       cursor: pointer;
@@ -377,12 +400,12 @@
         height: 0px;
       }
       to {
-        height: 300px;
+        height: 340px;
       }
     }
     @keyframes slideinContactClose {
       from {
-        height: 300px;
+        height: 340px;
       }
 
       to {
@@ -414,7 +437,7 @@
     width: 50px;
   }
 
-  .icon_arrow_activev {
+  .icon_arrow_active {
     transform: rotate(-180deg);
   }
 }
@@ -428,7 +451,7 @@
     padding-bottom: 90px;
 
     .social {
-      &_tetle {
+      &_title {
         margin-bottom: 20px;
       }
     }

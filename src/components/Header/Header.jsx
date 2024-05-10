@@ -19,7 +19,7 @@ import s from './header.module.scss';
 
 const Header = () => {
   const { onModal, isActiveModal } = useIsActive();
-  const { t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
@@ -30,19 +30,22 @@ const Header = () => {
     setIsOpen(false);
   };
 
-
-
   const locales = {
     en: { title: 'Eng' },
-    uk: { title: 'Ukr' }
-  }
+    uk: { title: 'Ukr' },
+  };
 
   return (
     <header className={s.header}>
       <div className="container">
         <div className={s.section}>
           <Link onClick={() => scroll.scrollToTop()} to="." href="#">
-            <CustomImagePicture classNamePhoto={s.logo} webp={logoImgWebp} photo={logoImgPng} altPhoto={t('header.logo.photo_alt')} />
+            <CustomImagePicture
+              classNamePhoto={s.logo}
+              webp={logoImgWebp}
+              photo={logoImgPng}
+              altPhoto={t('header.logo.photo_alt')}
+            />
           </Link>
           <button
             type="button"
@@ -110,7 +113,9 @@ const Header = () => {
                           duration={500}
                           className={s.elem_link}
                         >
-                          <span>{t('header.nav.menu.list.services.manufacturers')}</span>
+                          <span>
+                            {t('header.nav.menu.list.services.manufacturers')}
+                          </span>
                         </Link>
                       </li>
                       <li className={s.elem_item}>
@@ -122,7 +127,9 @@ const Header = () => {
                           duration={500}
                           className={s.elem_link}
                         >
-                          <span>{t('header.nav.menu.list.services.processors')}</span>
+                          <span>
+                            {t('header.nav.menu.list.services.processors')}
+                          </span>
                         </Link>
                       </li>
                       <li className={s.elem_item}>
@@ -134,7 +141,9 @@ const Header = () => {
                           duration={500}
                           className={s.elem_link}
                         >
-                          <span>{t('header.nav.menu.list.services.traders')}</span>
+                          <span>
+                            {t('header.nav.menu.list.services.traders')}
+                          </span>
                         </Link>
                       </li>
                     </ul>
@@ -163,7 +172,9 @@ const Header = () => {
                           duration={500}
                           className={s.elem_link}
                         >
-                          <span>{t('header.nav.menu.list.offers.purchase')}</span>
+                          <span>
+                            {t('header.nav.menu.list.offers.purchase')}
+                          </span>
                         </Link>
                       </li>
                       <li className={s.elem_item}>
@@ -178,7 +189,6 @@ const Header = () => {
                           <span>{t('header.nav.menu.list.offers.sale')}</span>
                         </Link>
                       </li>
-
                     </ul>
                   </li>
                   <li className={s.nav_item}>
@@ -212,6 +222,14 @@ const Header = () => {
                   <li className={s.hookup_item}>
                     <a href="tel:+380675202508" className={s.hookup_link}>
                       <span>+38 (067) 520 25 08</span>
+                    </a>
+                  </li>
+                  <li className={s.hookup_item}>
+                    <a
+                      href="mailto:info@agribrokers.com.ua"
+                      className={s.hookup_link}
+                    >
+                      <span>info@agribrokers.com.ua</span>
                     </a>
                   </li>
                   <li className={s.hookup_item}>
@@ -258,11 +276,11 @@ const Header = () => {
                 onClick={handleToggle}
                 className={s.contact_title}
               >
-                <span>{t("header.contact.title")}</span>
+                <span>{t('header.contact.title')}</span>
                 <IoIosArrowDown
                   className={
                     isOpen
-                      ? `${s.icon_arrow} ${s.icon_arrow_activev}`
+                      ? `${s.icon_arrow} ${s.icon_arrow_active}`
                       : `${s.icon_arrow}`
                   }
                 />
@@ -289,6 +307,15 @@ const Header = () => {
                   </li>
                   <li className={s.contact_item}>
                     <a
+                      href="mailto:info@agribrokers.com.ua"
+                      className={s.elem_link}
+                    >
+                      <AiOutlineMail className={s.icon_mail} />
+                      <span>info@agribrokers.com.ua</span>
+                    </a>
+                  </li>
+                  <li className={s.contact_item}>
+                    <a
                       href="mailto:agribrokersukraine@gmail.com"
                       className={s.elem_link}
                     >
@@ -302,16 +329,21 @@ const Header = () => {
           </OutsideClickHandler>
 
           <ul className={s.language_list}>
-            {Object.keys(locales).map((locale) => (
+            {Object.keys(locales).map(locale => (
               <li key={locale} className={s.language_item}>
                 <button
-                  className={i18n.resolvedLanguage === locale ?
-                    `${s.language_button} ${s.activebutton}` :
-                    `${s.language_button} ${s.inActivebutton}`}
-                  type='submit' onClick={() => i18n.changeLanguage(locale)}>
+                  className={
+                    i18n.resolvedLanguage === locale
+                      ? `${s.language_button} ${s.activeButton}`
+                      : `${s.language_button} ${s.inActiveButton}`
+                  }
+                  type="submit"
+                  onClick={() => i18n.changeLanguage(locale)}
+                >
                   {locales[locale].title}
                 </button>
-              </li>))}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

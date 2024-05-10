@@ -75,9 +75,10 @@
 }
 
 .link_item {
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
+  // &:not(:last-child) {
+  //   // margin-right: 20px;
+  // }
+  margin: 10px;
 
   &:hover,
   &:focus {
@@ -112,6 +113,10 @@
   fill: $blackColor;
 }
 
+.icon_instagram {
+  fill: $blackColor;
+}
+
 .social_text {
   color: $whiteColor;
   transition: 0.5s;
@@ -143,7 +148,17 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: ($modilBigWidth - 1px)) {
+@media screen and (max-width: 434px) {
+  .link_item {
+    max-width: 110px;
+  }
+
+  .social_text {
+    text-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: ($mobilBigWidth - 1px)) {
   .hero {
     padding: 45px 20px 120px;
 
@@ -154,12 +169,17 @@
     }
   }
 
+  .link_social {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   .social_text {
     font-size: 14px;
   }
 }
 
-@media screen and (min-width: $modilBigWidth) {
+@media screen and (min-width: $mobilBigWidth) {
   .hero_nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -167,7 +187,7 @@
   }
 }
 
-@media screen and (min-width: $modilBigWidth) and (max-width: 509px) {
+@media screen and (min-width: $mobilBigWidth) and (max-width: 509px) {
   .hero_nav {
     gap: 10px;
   }
@@ -179,13 +199,13 @@
   }
 }
 
-@media screen and (min-width: $modilBigWidth) and (max-width: ($tabletBigWidth - 1px)) {
+@media screen and (min-width: $mobilBigWidth) and (max-width: ($tabletBigWidth - 1px)) {
   .hero {
     padding: 80px 20px 200px;
   }
 
   .social_text {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -205,6 +225,11 @@
   }
 
   .icon_telegram {
+    width: 25px;
+    height: 25px;
+  }
+
+  .icon_instagram {
     width: 25px;
     height: 25px;
   }
@@ -231,6 +256,11 @@
   }
 
   .icon_telegram {
+    width: 35px;
+    height: 35px;
+  }
+
+  .icon_instagram {
     width: 35px;
     height: 35px;
   }

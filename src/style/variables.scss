@@ -5,7 +5,7 @@ $blackColor: #000;
 $textColor: #212121;
 $quoteColor: #7b7b7b;
 $textFooterColor: #929292;
-$liskGreenColor: #007120;
+$linkGreenColor: #007120;
 $heroBgc: rgba(0, 0, 0, 0.5);
 $buttonGreenColor: #007120;
 $buttonFocusGreenColor: #014213;
@@ -16,16 +16,17 @@ $bgColor: #f0f0f0;
 $bgFooterColor: #343333;
 $borderFooterColor: #515050;
 $bgModalColor: rgba(0, 0, 0, 0.5);
-$borderInpusColor: #dbdbdb;
-$textInpusColor: #939393;
+$borderInputColor: #dbdbdb;
+$textInputColor: #939393;
 $formButtonColor: #222222;
 
 // Section Width
-$modilWidth: 375px;
-$modilBigWidth: 480px;
+$mobilWidth: 375px;
+$mobilBigWidth: 480px;
 $tabletWidth: 768px;
 $tabletBigWidth: 992px;
 $desktopWidth: 1200px;
 
 // Cubic-bezier
 $timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
+// cubic-bezier

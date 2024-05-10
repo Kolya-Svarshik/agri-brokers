@@ -8,7 +8,7 @@
   padding: 45px 30px;
 }
 
-.about_tetle {
+.about_title {
   position: relative;
   margin-bottom: 55px;
 
@@ -46,13 +46,13 @@
 }
 
 @media screen and (max-width: ($tabletWidth - 1px)) {
-  .services_tetle {
+  .services_title {
     font-size: 30px;
   }
 }
 
 @media screen and (min-width: $tabletWidth) {
-  .services_tetle {
+  .services_title {
     font-size: 40px;
   }
 }

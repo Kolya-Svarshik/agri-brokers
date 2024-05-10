@@ -43,6 +43,7 @@
         "partnership": "For partners",
         "link": {
           "facebook": "Our Facebook",
+          "instagram": "Our Instagram",
           "telegram": {
             "sale": "FARMERS SELL",
             "purchase": "TRADERS BUY"
@@ -148,7 +149,8 @@
     "social": {
       "title": "FOLLOW US",
       "link": {
-        "facebook": "Our Facebook"
+        "facebook": "Our Facebook",
+        "instagram": "Our Instagram"
       }
     },
     "nav": {
@@ -171,8 +173,20 @@
         }
       }
     },
+    "cookie": {
+      "button": "I agree",
+      "text": {
+        "before": "This website uses cookies to enhance the user experience. See our",
+        "button": "privacy policy",
+        "after": "for more."
+      }
+    },
     "copy": {
-      "text": " All rights reserved."
+      "text": " All rights reserved.",
+      "button": "Privacy policy",
+      "policy": {
+        "text": "Privacy in policy is an important aspect that defines the obligation to protect personal information and ensure its confidentiality. We, as a web resource, closely adhere to the principles of confidentiality. We undertake not to disclose the personal information of our users to third parties without their consent. We use data only to ensure the quality of service, analyse and improve the website. Our privacy policy discloses how we collect, use, protect and disclose information from users. We ensure that any personal information is kept confidential and protected using state-of-the-art security technologies."
+      }
     }
   }
 }
