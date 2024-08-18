@@ -69,7 +69,7 @@ const Hero = () => {
             </li>
             <li className={s.link_item}>
               <a
-                href="https://t.me/agrosales_sale_grain"
+                href="https://t.me/farmers_sale_grain_ua"
                 target="_blank"
                 rel="noreferrer"
                 className={s.social_text}

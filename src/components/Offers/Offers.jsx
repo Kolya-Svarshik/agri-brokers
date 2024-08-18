@@ -58,7 +58,7 @@ const Offers = () => {
                   </p>
                   <p className={s.elem_text}>{t('main.offers.cart.sale.text.two')}</p>
                   <a
-                    href="https://t.me/agrosales_sale_grain"
+                    href="https://t.me/farmers_sale_grain_ua"
                     target="_blank"
                     without="Link Telegram"
                     rel="noreferrer"
